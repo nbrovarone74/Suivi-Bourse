@@ -1,0 +1,5 @@
+1. Créez un dépôt GitHub (gratuit) et déposez ces fichiers.
+2. Onglet Actions > "Mise à jour des données" > Run workflow (génère data.json).
+3. Cloudflare Pages ou Netlify : connectez le dépôt, aucune commande de build, dossier racine "/".
+4. Pour ajouter d'autres titres : éditez EXTRA dans update_data.py (ex. "AAPL").
+Votre portefeuille est enregistré dans votre navigateur (localStorage).

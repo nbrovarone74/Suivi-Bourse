@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suivi bourse</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+:root{--bg:#f2f4f7;--card:#fff;--ink:#16202e;--mute:#6b7787;--line:#dfe4ea;--up:#0d8a4f;--down:#c93a3a;--acc:#1f4fd8}
+@media(prefers-color-scheme:dark){:root{--bg:#0f141b;--card:#171e28;--ink:#e8edf3;--mute:#8a97a8;--line:#273141;--up:#3ecf8e;--down:#ff6b6b;--acc:#7ea2ff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 "IBM Plex Sans",system-ui,sans-serif}
+main{max-width:1100px;margin:0 auto;padding:24px 16px 60px}
+header{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px}
+h1{font-size:22px;margin:0}
+.maj{color:var(--mute);font-size:13px}
+nav{display:flex;gap:4px;margin:20px 0 16px;border-bottom:1px solid var(--line)}
+nav button{background:none;border:0;padding:10px 16px;font:inherit;color:var(--mute);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px}
+nav button.on{color:var(--ink);border-color:var(--acc);font-weight:600}
+.total{display:flex;gap:32px;flex-wrap:wrap;margin-bottom:20px}
+.total div span{display:block;color:var(--mute);font-size:13px}
+.total div b{font:500 26px "IBM Plex Mono",monospace}
+form{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+input,select{padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink);font:inherit}
+button.add{background:var(--acc);color:#fff;border:0;border-radius:6px;padding:8px 16px;font:inherit;cursor:pointer}
+.wrap{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:8px}
+table{width:100%;border-collapse:collapse;white-space:nowrap}
+th,td{padding:9px 12px;text-align:right;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child,th.l,td.l{text-align:left}
+th{font-weight:600;color:var(--mute);font-size:13px;cursor:pointer;user-select:none}
+tr:last-child td{border-bottom:0}
+td.n{font-family:"IBM Plex Mono",monospace;font-size:14px}
+.up{color:var(--up)}.down{color:var(--down)}
+.x{background:none;border:0;color:var(--mute);cursor:pointer;font-size:16px}
+.empty{padding:28px;color:var(--mute);text-align:center}
+.note{color:var(--mute);font-size:13px;margin-top:12px}
+</style>
+</head>
+<body>
+<main>
+<header><h1>Suivi bourse</h1><span class="maj" id="maj"></span></header>
+<nav><button data-v="pf" class="on">Mon portefeuille</button><button data-v="cac">CAC 40</button></nav>
+<section id="pf">
+  <div class="total"><div><span>Valeur</span><b id="tv">–</b></div><div><span>Gain / perte</span><b id="tg">–</b></div></div>
+  <form id="f"><select id="t" required></select><input id="q" type="number" step="any" min="0" placeholder="Quantité" required><input id="p" type="number" step="any" min="0" placeholder="Prix d'achat moyen" required><button class="add">Ajouter</button></form>
+  <div class="wrap"><table id="tpf"></table></div>
+</section>
+<section id="cac" hidden><div class="wrap"><table id="tcac"></table></div>
+<p class="note">PER secteur = médiane des valeurs du CAC 40 du même secteur. Données Yahoo Finance, cours parfois différés.</p></section>
+</main>
+<script>
+const $=s=>document.querySelector(s);
+const nf=(v,d=2)=>v==null||isNaN(v)?"–":v.toLocaleString("fr-FR",{minimumFractionDigits:d,maximumFractionDigits:d});
+const big=v=>v==null?"–":(Math.abs(v)>=1e9?nf(v/1e9,1)+" Md":nf(v/1e6,0)+" M");
+const cls=v=>v>0?"up":v<0?"down":"";
+let D=[],sort={k:"nom",d:1},pf=[];
+try{pf=JSON.parse(localStorage.getItem("pf")||"[]")}catch(e){}
+const save=()=>{try{localStorage.setItem("pf",JSON.stringify(pf))}catch(e){}};
+const med=a=>{a=a.filter(x=>x!=null&&x>0).sort((x,y)=>x-y);if(!a.length)return null;const m=a.length>>1;return a.length%2?a[m]:(a[m-1]+a[m])/2};
+let secPer={};
+fetch("data.json?"+Date.now()).then(r=>r.json()).then(j=>{
+  D=j.actions;
+  $("#maj").textContent="Mis à jour le "+new Date(j.maj).toLocaleString("fr-FR");
+  const g={};D.filter(a=>a.cac40).forEach(a=>(g[a.secteur]??=[]).push(a.per));
+  for(const s in g)secPer[s]=med(g[s]);
+  $("#t").innerHTML=D.slice().sort((a,b)=>a.nom.localeCompare(b.nom)).map(a=>`<option value="${a.ticker}">${a.nom} (${a.ticker})</option>`).join("");
+  render();
+}).catch(()=>{$("#maj").textContent="data.json introuvable : lancez update_data.py";render()});
+
+function renderPF(){
+  let tv=0,tc=0;
+  const rows=pf.map((l,i)=>{
+    const a=D.find(x=>x.ticker===l.t);if(!a)return"";
+    const v=a.cours*l.q,c=l.p*l.q,g=v-c;tv+=v;tc+=c;
+    const sp=secPer[a.secteur];
+    return `<tr><td class="l">${a.nom}</td><td class="n">${nf(l.q,0)}</td><td class="n">${nf(l.p)}</td><td class="n">${nf(a.cours)}</td><td class="n">${nf(v,0)} €</td><td class="n ${cls(g)}">${nf(g,0)} € (${nf(g/c*100,1)} %)</td><td class="n">${nf(a.per,1)}</td><td class="n">${nf(sp,1)}</td><td><button class="x" data-i="${i}">✕</button></td></tr>`}).join("");
+  $("#tpf").innerHTML=pf.length?`<tr><th class="l">Valeur</th><th>Qté</th><th>PRU</th><th>Cours</th><th>Valeur</th><th>Gain / perte</th><th>PER</th><th>PER secteur</th><th></th></tr>${rows}`:`<tr><td class="empty">Ajoutez votre première ligne ci-dessus.</td></tr>`;
+  $("#tv").textContent=nf(tv,0)+" €";
+  const g=tv-tc;$("#tg").textContent=tc?`${nf(g,0)} € (${nf(g/tc*100,1)} %)`:"–";$("#tg").className=cls(g);
+}
+function renderCAC(){
+  const cols=[["nom","Valeur",1],["secteur","Secteur",1],["cours","Cours"],["var","Var. jour"],["per","PER"],["sp","PER secteur"],["ca","CA"],["resultat","Résultat net"]];
+  const L=D.filter(a=>a.cac40).map(a=>({...a,sp:secPer[a.secteur]}));
+  L.sort((a,b)=>{const x=a[sort.k],y=b[sort.k];if(x==null)return 1;if(y==null)return -1;return(typeof x==="string"?x.localeCompare(y):x-y)*sort.d});
+  $("#tcac").innerHTML=`<tr>${cols.map(c=>`<th class="${c[2]?"l":""}" data-k="${c[0]}">${c[1]}${sort.k===c[0]?(sort.d>0?" ↑":" ↓"):""}</th>`).join("")}</tr>`+
+  L.map(a=>`<tr><td class="l">${a.nom}</td><td class="l">${a.secteur}</td><td class="n">${nf(a.cours)}</td><td class="n ${cls(a.var)}">${nf(a.var)} %</td><td class="n">${nf(a.per,1)}</td><td class="n">${nf(a.sp,1)}</td><td class="n">${big(a.ca)}</td><td class="n">${big(a.resultat)}</td></tr>`).join("");
+}
+const render=()=>{renderPF();renderCAC()};
+$("#f").onsubmit=e=>{e.preventDefault();pf.push({t:$("#t").value,q:+$("#q").value,p:+$("#p").value});save();$("#q").value=$("#p").value="";render()};
+$("#tpf").onclick=e=>{const i=e.target.dataset.i;if(i!=null){pf.splice(+i,1);save();render()}};
+$("#tcac").onclick=e=>{const k=e.target.dataset.k;if(!k)return;sort=sort.k===k?{k,d:-sort.d}:{k,d:1};renderCAC()};
+document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{document.querySelectorAll("nav button").forEach(x=>x.classList.toggle("on",x===b));$("#pf").hidden=b.dataset.v!=="pf";$("#cac").hidden=b.dataset.v!=="cac"});
+</script>
+</body>
+</html>
