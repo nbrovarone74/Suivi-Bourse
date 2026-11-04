@@ -6,24 +6,27 @@
 <title>Suivi bourse</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap">
 <style>
-:root{--bg:#f2f4f7;--card:#fff;--ink:#16202e;--mute:#6b7787;--line:#dfe4ea;--up:#0d8a4f;--down:#c93a3a;--acc:#1f4fd8}
-@media(prefers-color-scheme:dark){:root{--bg:#0f141b;--card:#171e28;--ink:#e8edf3;--mute:#8a97a8;--line:#273141;--up:#3ecf8e;--down:#ff6b6b;--acc:#7ea2ff}}
+:root{--bg:#f2f4f7;--card:#fff;--ink:#16202e;--mute:#6b7787;--line:#dfe4ea;--up:#0d8a4f;--down:#c93a3a;--acc:#1f4fd8;--gold:#c58a00}
+@media(prefers-color-scheme:dark){:root{--bg:#0f141b;--card:#171e28;--ink:#e8edf3;--mute:#8a97a8;--line:#273141;--up:#3ecf8e;--down:#ff6b6b;--acc:#7ea2ff;--gold:#f5c542}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 "IBM Plex Sans",system-ui,sans-serif}
 main{max-width:1100px;margin:0 auto;padding:24px 16px 60px}
 header{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px}
-h1{font-size:22px;margin:0}
+h1{font-size:22px;margin:0}h2{font-size:18px;margin:0}h3{font-size:14px;margin:0 0 8px;color:var(--mute);font-weight:600}
 .maj{color:var(--mute);font-size:13px}
-nav{display:flex;gap:4px;margin:20px 0 16px;border-bottom:1px solid var(--line)}
-nav button{background:none;border:0;padding:10px 16px;font:inherit;color:var(--mute);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px}
+nav{display:flex;gap:4px;margin:20px 0 16px;border-bottom:1px solid var(--line);overflow-x:auto}
+nav button{background:none;border:0;padding:10px 16px;font:inherit;color:var(--mute);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap}
 nav button.on{color:var(--ink);border-color:var(--acc);font-weight:600}
-.total{display:flex;gap:32px;flex-wrap:wrap;margin-bottom:20px}
-.total div span{display:block;color:var(--mute);font-size:13px}
-.total div b{font:500 26px "IBM Plex Mono",monospace}
-form{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.kpis{display:flex;gap:28px;flex-wrap:wrap;margin-bottom:20px}
+.kpis div span{display:block;color:var(--mute);font-size:13px}
+.kpis div b{font:500 22px "IBM Plex Mono",monospace}
+form,.row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;align-items:end}
+label{display:flex;flex-direction:column;font-size:13px;color:var(--mute);gap:2px}
 input,select{padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink);font:inherit}
-button.add{background:var(--acc);color:#fff;border:0;border-radius:6px;padding:8px 16px;font:inherit;cursor:pointer}
-.wrap{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:8px}
+button.add,button.back{background:var(--acc);color:#fff;border:0;border-radius:6px;padding:8px 16px;font:inherit;cursor:pointer}
+button.back{background:none;color:var(--acc);padding:0;margin-bottom:12px}
+.wrap,.card{background:var(--card);border:1px solid var(--line);border-radius:8px}
+.wrap{overflow-x:auto}.card{padding:16px}
 table{width:100%;border-collapse:collapse;white-space:nowrap}
 th,td{padding:9px 12px;text-align:right;border-bottom:1px solid var(--line)}
 th:first-child,td:first-child,th.l,td.l{text-align:left}
@@ -31,65 +34,147 @@ th{font-weight:600;color:var(--mute);font-size:13px;cursor:pointer;user-select:n
 tr:last-child td{border-bottom:0}
 td.n{font-family:"IBM Plex Mono",monospace;font-size:14px}
 .up{color:var(--up)}.down{color:var(--down)}
+.lk{cursor:pointer;color:var(--acc)}.lk:hover{text-decoration:underline}
 .x{background:none;border:0;color:var(--mute);cursor:pointer;font-size:16px}
-.empty{padding:28px;color:var(--mute);text-align:center}
+.empty{padding:20px;color:var(--mute);text-align:center;font-size:13px}
 .note{color:var(--mute);font-size:13px;margin-top:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin-bottom:12px}
+.ch{width:100%;height:auto}.ch .t{font:10px "IBM Plex Mono",monospace;fill:var(--ink)}.ch .m{fill:var(--mute)}
+.ev{display:flex;gap:14px;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line)}
+.ev:last-child{border:0}
+.ev .d{width:52px;text-align:center;background:var(--bg);border-radius:8px;padding:4px 0;color:var(--gold)}
+.ev .d small{display:block;font-size:11px;text-transform:uppercase;font-weight:600}
+.ev .d b{font:600 18px "IBM Plex Sans"}
+.big{font:500 24px "IBM Plex Mono",monospace;color:var(--gold)}
 </style>
 </head>
 <body>
 <main>
 <header><h1>Suivi bourse</h1><span class="maj" id="maj"></span></header>
-<nav><button data-v="pf" class="on">Mon portefeuille</button><button data-v="cac">CAC 40</button></nav>
+<nav><button data-v="pf" class="on">Mon portefeuille</button><button data-v="cac">CAC 40</button><button data-v="cal">Calendrier</button></nav>
+
 <section id="pf">
-  <div class="total"><div><span>Valeur</span><b id="tv">–</b></div><div><span>Gain / perte</span><b id="tg">–</b></div></div>
+  <div class="kpis"><div><span>Valeur</span><b id="tv">–</b></div><div><span>Gain / perte</span><b id="tg">–</b></div><div><span>Dividendes / an (estimé)</span><b id="td">–</b></div></div>
   <form id="f"><select id="t" required></select><input id="q" type="number" step="any" min="0" placeholder="Quantité" required><input id="p" type="number" step="any" min="0" placeholder="Prix d'achat moyen" required><button class="add">Ajouter</button></form>
   <div class="wrap"><table id="tpf"></table></div>
 </section>
+
 <section id="cac" hidden><div class="wrap"><table id="tcac"></table></div>
-<p class="note">PER secteur = médiane des valeurs du CAC 40 du même secteur. Données Yahoo Finance, cours parfois différés.</p></section>
+<p class="note">PER secteur = médiane des valeurs du CAC 40 du même secteur. Cliquez sur une valeur pour le détail. Données Yahoo Finance, cours parfois différés.</p></section>
+
+<section id="cal" hidden>
+  <label style="flex-direction:row;align-items:center;gap:8px;margin-bottom:12px"><input type="checkbox" id="onlypf"> Mon portefeuille seulement</label>
+  <div class="wrap" id="evs"></div>
+</section>
+
+<section id="det" hidden></section>
 </main>
 <script>
 const $=s=>document.querySelector(s);
 const nf=(v,d=2)=>v==null||isNaN(v)?"–":v.toLocaleString("fr-FR",{minimumFractionDigits:d,maximumFractionDigits:d});
 const big=v=>v==null?"–":(Math.abs(v)>=1e9?nf(v/1e9,1)+" Md":nf(v/1e6,0)+" M");
 const cls=v=>v>0?"up":v<0?"down":"";
-let D=[],sort={k:"nom",d:1},pf=[];
+const med=a=>{a=a.filter(x=>x!=null&&x>0).sort((x,y)=>x-y);if(!a.length)return null;const m=a.length>>1;return a.length%2?a[m]:(a[m-1]+a[m])/2};
+const yld=a=>a&&a.div_rate&&a.cours?a.div_rate/a.cours*100:null;
+let D=[],sort={k:"nom",d:1},pf=[],secPer={},cur=null;
 try{pf=JSON.parse(localStorage.getItem("pf")||"[]")}catch(e){}
 const save=()=>{try{localStorage.setItem("pf",JSON.stringify(pf))}catch(e){}};
-const med=a=>{a=a.filter(x=>x!=null&&x>0).sort((x,y)=>x-y);if(!a.length)return null;const m=a.length>>1;return a.length%2?a[m]:(a[m-1]+a[m])/2};
-let secPer={};
-fetch("data.json?"+Date.now()).then(r=>r.json()).then(j=>{
-  D=j.actions;
-  $("#maj").textContent="Mis à jour le "+new Date(j.maj).toLocaleString("fr-FR");
-  const g={};D.filter(a=>a.cac40).forEach(a=>(g[a.secteur]??=[]).push(a.per));
-  for(const s in g)secPer[s]=med(g[s]);
-  $("#t").innerHTML=D.slice().sort((a,b)=>a.nom.localeCompare(b.nom)).map(a=>`<option value="${a.ticker}">${a.nom} (${a.ticker})</option>`).join("");
-  render();
-}).catch(()=>{$("#maj").textContent="data.json introuvable : lancez update_data.py";render()});
 
+function show(v){["pf","cac","cal","det"].forEach(x=>$("#"+x).hidden=x!==v);document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("on",b.dataset.v===v));window.scrollTo(0,0)}
+
+/* ---------- graphiques SVG ---------- */
+function bars(data,fmt=v=>nf(v,2)){
+  if(!data.length)return'<div class="empty">Pas de données</div>';
+  const W=420,H=170,p=28,mx=Math.max(...data.map(d=>d[1]),0)||1,bw=(W-2*p)/data.length;
+  return`<svg viewBox="0 0 ${W} ${H}" class="ch">`+data.map((d,i)=>{const h=(H-2*p)*d[1]/mx,x=p+i*bw+bw*.15,cx=x+bw*.35;
+    return`<rect x="${x}" y="${H-p-h}" width="${bw*.7}" height="${h}" fill="var(--gold)" rx="2"/><text x="${cx}" y="${H-p-h-4}" text-anchor="middle" class="t">${fmt(d[1])}</text><text x="${cx}" y="${H-10}" text-anchor="middle" class="t m">${d[0]}</text>`}).join("")+`</svg>`;
+}
+function line(data,color){
+  const pts=data.filter(d=>d[1]!=null);
+  if(pts.length<2)return'<div class="empty">Données insuffisantes</div>';
+  const W=420,H=170,p=30,vs=pts.map(d=>d[1]);let mn=Math.min(...vs),mx=Math.max(...vs);if(mn===mx){mn-=1;mx+=1}
+  const X=i=>p+i*(W-2*p)/(pts.length-1),Y=v=>H-p-(H-2*p)*(v-mn)/(mx-mn),m=med(vs);
+  return`<svg viewBox="0 0 ${W} ${H}" class="ch">`+
+    (m!=null?`<line x1="${p}" x2="${W-p}" y1="${Y(m)}" y2="${Y(m)}" stroke="var(--mute)" stroke-dasharray="4 4"/>`:"")+
+    `<polyline fill="none" stroke="${color}" stroke-width="2.5" points="${pts.map((d,i)=>X(i)+","+Y(d[1])).join(" ")}"/>`+
+    pts.map((d,i)=>`<circle cx="${X(i)}" cy="${Y(d[1])}" r="3.5" fill="${color}"/><text x="${X(i)}" y="${Y(d[1])-9}" text-anchor="middle" class="t">${nf(d[1],1)}x</text><text x="${X(i)}" y="${H-8}" text-anchor="middle" class="t m">${d[0]}</text>`).join("")+`</svg>`;
+}
+
+/* ---------- portefeuille ---------- */
 function renderPF(){
-  let tv=0,tc=0;
+  let tv=0,tc=0,td=0;
   const rows=pf.map((l,i)=>{
     const a=D.find(x=>x.ticker===l.t);if(!a)return"";
-    const v=a.cours*l.q,c=l.p*l.q,g=v-c;tv+=v;tc+=c;
-    const sp=secPer[a.secteur];
-    return `<tr><td class="l">${a.nom}</td><td class="n">${nf(l.q,0)}</td><td class="n">${nf(l.p)}</td><td class="n">${nf(a.cours)}</td><td class="n">${nf(v,0)} €</td><td class="n ${cls(g)}">${nf(g,0)} € (${nf(g/c*100,1)} %)</td><td class="n">${nf(a.per,1)}</td><td class="n">${nf(sp,1)}</td><td><button class="x" data-i="${i}">✕</button></td></tr>`}).join("");
-  $("#tpf").innerHTML=pf.length?`<tr><th class="l">Valeur</th><th>Qté</th><th>PRU</th><th>Cours</th><th>Valeur</th><th>Gain / perte</th><th>PER</th><th>PER secteur</th><th></th></tr>${rows}`:`<tr><td class="empty">Ajoutez votre première ligne ci-dessus.</td></tr>`;
-  $("#tv").textContent=nf(tv,0)+" €";
+    const v=a.cours*l.q,c=l.p*l.q,g=v-c;tv+=v;tc+=c;td+=(a.div_rate||0)*l.q;
+    return`<tr><td class="l"><span class="lk" data-t="${a.ticker}">${a.nom}</span></td><td class="n">${nf(l.q,0)}</td><td class="n">${nf(l.p)}</td><td class="n">${nf(a.cours)}</td><td class="n">${nf(v,0)} €</td><td class="n ${cls(g)}">${nf(g,0)} € (${nf(g/c*100,1)} %)</td><td class="n">${nf(a.per,1)}</td><td class="n">${nf(secPer[a.secteur],1)}</td><td class="n">${nf(yld(a),2)} %</td><td><button class="x" data-i="${i}">✕</button></td></tr>`}).join("");
+  $("#tpf").innerHTML=pf.length?`<tr><th class="l">Valeur</th><th>Qté</th><th>PRU</th><th>Cours</th><th>Valeur</th><th>Gain / perte</th><th>PER</th><th>PER secteur</th><th>Rdt div.</th><th></th></tr>${rows}`:`<tr><td class="empty">Ajoutez votre première ligne ci-dessus.</td></tr>`;
+  $("#tv").textContent=nf(tv,0)+" €";$("#td").textContent=nf(td,0)+" €";
   const g=tv-tc;$("#tg").textContent=tc?`${nf(g,0)} € (${nf(g/tc*100,1)} %)`:"–";$("#tg").className=cls(g);
 }
+
+/* ---------- CAC 40 ---------- */
 function renderCAC(){
-  const cols=[["nom","Valeur",1],["secteur","Secteur",1],["cours","Cours"],["var","Var. jour"],["per","PER"],["sp","PER secteur"],["ca","CA"],["resultat","Résultat net"]];
-  const L=D.filter(a=>a.cac40).map(a=>({...a,sp:secPer[a.secteur]}));
+  const cols=[["nom","Valeur",1],["secteur","Secteur",1],["cours","Cours"],["var","Var. jour"],["per","PER"],["sp","PER secteur"],["rdt","Rdt div."],["ca","CA"],["resultat","Résultat net"]];
+  const L=D.filter(a=>a.cac40).map(a=>({...a,sp:secPer[a.secteur],rdt:yld(a)}));
   L.sort((a,b)=>{const x=a[sort.k],y=b[sort.k];if(x==null)return 1;if(y==null)return -1;return(typeof x==="string"?x.localeCompare(y):x-y)*sort.d});
   $("#tcac").innerHTML=`<tr>${cols.map(c=>`<th class="${c[2]?"l":""}" data-k="${c[0]}">${c[1]}${sort.k===c[0]?(sort.d>0?" ↑":" ↓"):""}</th>`).join("")}</tr>`+
-  L.map(a=>`<tr><td class="l">${a.nom}</td><td class="l">${a.secteur}</td><td class="n">${nf(a.cours)}</td><td class="n ${cls(a.var)}">${nf(a.var)} %</td><td class="n">${nf(a.per,1)}</td><td class="n">${nf(a.sp,1)}</td><td class="n">${big(a.ca)}</td><td class="n">${big(a.resultat)}</td></tr>`).join("");
+  L.map(a=>`<tr><td class="l"><span class="lk" data-t="${a.ticker}">${a.nom}</span></td><td class="l">${a.secteur}</td><td class="n">${nf(a.cours)}</td><td class="n ${cls(a.var)}">${nf(a.var)} %</td><td class="n">${nf(a.per,1)}</td><td class="n">${nf(a.sp,1)}</td><td class="n">${nf(a.rdt,2)} %</td><td class="n">${big(a.ca)}</td><td class="n">${big(a.resultat)}</td></tr>`).join("");
 }
-const render=()=>{renderPF();renderCAC()};
+
+/* ---------- calendrier ---------- */
+function renderCal(){
+  const only=$("#onlypf").checked,mine=new Set(pf.map(l=>l.t)),today=new Date().toISOString().slice(0,10),L=[];
+  D.forEach(a=>{if(only&&!mine.has(a.ticker))return;const e=a.events||{};
+    if(e.resultats&&e.resultats>=today)L.push([e.resultats,a,"Résultats"]);
+    if(e.detachement&&e.detachement>=today)L.push([e.detachement,a,"Détachement du dividende"])});
+  L.sort((x,y)=>x[0].localeCompare(y[0]));
+  $("#evs").innerHTML=L.length?L.map(([d,a,t])=>{const dt=new Date(d+"T12:00");
+    return`<div class="ev"><div class="d"><small>${dt.toLocaleDateString("fr-FR",{month:"short"})}</small><b>${dt.getDate()}</b></div><div><span class="lk" data-t="${a.ticker}"><b>${a.nom}</b></span><div class="maj">${t}</div></div></div>`}).join(""):'<div class="empty">Aucun événement à venir.</div>';
+}
+
+/* ---------- détail d'une valeur ---------- */
+function detail(t){
+  const a=D.find(x=>x.ticker===t);if(!a)return;cur=a;
+  const divs=Object.entries(a.divs||{}).sort((x,y)=>x[0]-y[0]);
+  const full=divs.filter(d=>+d[0]<new Date().getFullYear());
+  let g=0;if(full.length>=3&&full[0][1]>0){g=(Math.pow(full.at(-1)[1]/full[0][1],1/(full.length-1))-1)*100}
+  g=Math.max(-20,Math.min(30,g));
+  const R=a.ratios||[],rc=(k,n,c)=>`<div class="card"><h3>${n}${med(R.map(r=>r[k]))!=null?" · médiane "+nf(med(R.map(r=>r[k])),1)+"x":""}</h3>${line(R.map(r=>[r.annee,r[k]]),c)}</div>`;
+  $("#det").innerHTML=`<button class="back" id="bk">← Retour</button>
+  <header style="margin-bottom:16px"><h2>${a.nom} <span class="maj">${a.ticker} · ${a.secteur}</span></h2></header>
+  <div class="kpis"><div><span>Cours</span><b>${nf(a.cours)}</b></div><div><span>Variation</span><b class="${cls(a.var)}">${nf(a.var)} %</b></div><div><span>PER</span><b>${nf(a.per,1)}</b></div><div><span>PER secteur</span><b>${nf(secPer[a.secteur],1)}</b></div><div><span>Rdt dividende</span><b>${nf(yld(a),2)} %</b></div><div><span>Payout</span><b>${a.payout!=null?nf(a.payout*100,0)+" %":"–"}</b></div><div><span>CA</span><b>${big(a.ca)}</b></div><div><span>Résultat net</span><b>${big(a.resultat)}</b></div></div>
+  <h3>Dividendes</h3>
+  <div class="grid"><div class="card"><h3>Dividende par action et par an</h3>${bars(divs.map(d=>[d[0],d[1]]))}</div>
+  <div class="card"><h3>Rendement sur coût</h3>
+   <div class="row"><label>Actions<input id="c1" type="number" value="100" min="0"></label><label>Prix d'achat<input id="c2" type="number" step="any" value="${a.cours?a.cours.toFixed(2):""}"></label><label>Années<input id="c3" type="number" value="5" min="1" max="30"></label><label>Croiss. div. %/an<input id="c4" type="number" step="0.1" value="${g.toFixed(1)}"></label></div>
+   <div id="co"></div></div></div>
+  <h3>Ratios (valeur à chaque clôture annuelle)</h3>
+  <div class="grid">${rc("pe","PER","var(--acc)")}${rc("pfcf","P / FCF","var(--down)")}${rc("evebitda","EV / EBITDA","var(--gold)")}${rc("pb","P / book","var(--up)")}${rc("ps","P / sales","#9b59d0")}</div>
+  <p class="note">Ratios calculés sur les derniers exercices annuels disponibles (Yahoo Finance, souvent 4 ans). Ligne pointillée = médiane.</p>`;
+  $("#bk").onclick=()=>show("cac");
+  ["c1","c2","c3","c4"].forEach(i=>$("#"+i).oninput=calc);calc();show("det");
+}
+function calc(){
+  const a=cur,n=+$("#c1").value,pru=+$("#c2").value,y=Math.max(1,Math.min(30,+$("#c3").value||1)),gr=(+$("#c4").value||0)/100,d0=a.div_rate||0;
+  if(!d0||!pru){$("#co").innerHTML='<div class="empty">Cette valeur ne verse pas de dividende.</div>';return}
+  const dn=d0*Math.pow(1+gr,y),data=[];for(let i=0;i<=y;i++)data.push(["+"+i,n*d0*Math.pow(1+gr,i)]);
+  $("#co").innerHTML=`<div class="kpis"><div><span>Rdt sur coût actuel</span><b class="big">${nf(d0/pru*100,2)} %</b></div><div><span>Rdt sur coût dans ${y} ans</span><b class="big">${nf(dn/pru*100,2)} %</b></div><div><span>Dividende annuel dans ${y} ans</span><b class="big">${nf(n*dn,0)} €</b></div></div>${bars(data.length>12?data.filter((_,i)=>i%Math.ceil(data.length/12)===0):data,v=>nf(v,0))}`;
+}
+
+/* ---------- init ---------- */
+const render=()=>{renderPF();renderCAC();renderCal()};
+fetch("data.json?"+Date.now()).then(r=>r.json()).then(j=>{
+  D=j.actions;$("#maj").textContent="Mis à jour le "+new Date(j.maj).toLocaleString("fr-FR");
+  const g={};D.filter(a=>a.cac40).forEach(a=>(g[a.secteur]??=[]).push(a.per));for(const s in g)secPer[s]=med(g[s]);
+  $("#t").innerHTML=D.slice().sort((a,b)=>a.nom.localeCompare(b.nom)).map(a=>`<option value="${a.ticker}">${a.nom} (${a.ticker})</option>`).join("");
+  render();
+}).catch(()=>{$("#maj").textContent="data.json introuvable : lancez la mise à jour (onglet Actions)";render()});
 $("#f").onsubmit=e=>{e.preventDefault();pf.push({t:$("#t").value,q:+$("#q").value,p:+$("#p").value});save();$("#q").value=$("#p").value="";render()};
 $("#tpf").onclick=e=>{const i=e.target.dataset.i;if(i!=null){pf.splice(+i,1);save();render()}};
 $("#tcac").onclick=e=>{const k=e.target.dataset.k;if(!k)return;sort=sort.k===k?{k,d:-sort.d}:{k,d:1};renderCAC()};
-document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{document.querySelectorAll("nav button").forEach(x=>x.classList.toggle("on",x===b));$("#pf").hidden=b.dataset.v!=="pf";$("#cac").hidden=b.dataset.v!=="cac"});
+$("#onlypf").onchange=renderCal;
+document.addEventListener("click",e=>{const t=e.target.dataset&&e.target.dataset.t;if(t)detail(t)});
+document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>show(b.dataset.v));
 </script>
 </body>
 </html>
