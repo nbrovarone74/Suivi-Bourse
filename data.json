@@ -1,437 +1,2332 @@
 {
- "maj": "2026-11-04T11:01:10.892675Z",
+ "maj": "2026-11-04T12:16:11.930685Z",
  "actions": [
   {
    "ticker": "AI.PA",
    "nom": "AIR LIQUIDE",
    "secteur": "Basic Materials",
    "devise": "EUR",
-   "cours": 184.48,
-   "var": 1.051708,
-   "per": 33.23964,
+   "cours": 184.76,
+   "var": 1.2050816,
+   "per": 33.29009,
    "ca": 27045900288,
    "resultat": 3539399936,
-   "cac40": true
+   "div_rate": 3.36,
+   "payout": 0.6053,
+   "cac40": true,
+   "divs": {
+    "2016": 1.5724,
+    "2017": 1.6144,
+    "2018": 1.81,
+    "2019": 1.81,
+    "2020": 2.0286,
+    "2021": 2.0661,
+    "2022": 2.1788,
+    "2023": 2.438,
+    "2024": 2.6446,
+    "2025": 3.0,
+    "2026": 3.3636
+   },
+   "events": {
+    "detachement": "2026-05-18"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 25.1,
+     "ps": 2.3,
+     "pfcf": 27.3,
+     "pb": 2.9,
+     "evebitda": 12.6
+    },
+    {
+     "annee": 2023,
+     "pe": 30.0,
+     "ps": 3.3,
+     "pfcf": 32.1,
+     "pb": 3.8,
+     "evebitda": 15.3
+    },
+    {
+     "annee": 2024,
+     "pe": 27.4,
+     "ps": 3.3,
+     "pfcf": 32.3,
+     "pb": 3.4,
+     "evebitda": 14.2
+    },
+    {
+     "annee": 2025,
+     "pe": 24.0,
+     "ps": 3.4,
+     "pfcf": 34.6,
+     "pb": 3.5,
+     "evebitda": 13.6
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "AIR.PA",
    "nom": "AIRBUS SE",
    "secteur": "Industrials",
    "devise": "EUR",
-   "cours": 195.62,
-   "var": 1.1897309,
-   "per": 25.079487,
+   "cours": 195.64,
+   "var": 1.2000786,
+   "per": 25.08205,
    "ca": 76629000192,
    "resultat": 6167000064,
-   "cac40": true
+   "div_rate": 3.2,
+   "payout": 0.4103,
+   "cac40": true,
+   "divs": {
+    "2016": 1.3,
+    "2017": 1.35,
+    "2018": 1.5,
+    "2019": 1.65,
+    "2022": 1.5,
+    "2023": 1.8,
+    "2024": 2.8,
+    "2025": 3.0,
+    "2026": 3.2
+   },
+   "events": {
+    "resultats": "2026-10-28",
+    "detachement": "2026-04-21"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 20.6,
+     "ps": 1.5,
+     "pfcf": 22.9,
+     "pb": 6.8,
+     "evebitda": 10.1
+    },
+    {
+     "annee": 2023,
+     "pe": 29.1,
+     "ps": 1.7,
+     "pfcf": 34.4,
+     "pb": 6.2,
+     "evebitda": 13.5
+    },
+    {
+     "annee": 2024,
+     "pe": 28.9,
+     "ps": 1.8,
+     "pfcf": 32.7,
+     "pb": 6.2,
+     "evebitda": 12.9
+    },
+    {
+     "annee": 2025,
+     "pe": 30.1,
+     "ps": 2.1,
+     "pfcf": 38.7,
+     "pb": 6.0,
+     "evebitda": 14.9
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "ALO.PA",
    "nom": "ALSTOM",
    "secteur": "Industrials",
    "devise": "EUR",
-   "cours": 11.23,
-   "var": 0.9433921,
-   "per": 18.716665,
+   "cours": 11.16,
+   "var": 0.31474683,
+   "per": 18.599998,
    "ca": 19171000320,
    "resultat": 279000000,
-   "cac40": true
+   "div_rate": null,
+   "payout": 0.0,
+   "cac40": true,
+   "divs": {
+    "2017": 0.2186,
+    "2018": 0.3061,
+    "2019": 4.8098,
+    "2021": 0.2358,
+    "2022": 0.2358,
+    "2023": 0.2358
+   },
+   "events": {
+    "resultats": "2026-11-17",
+    "detachement": "2023-07-17"
+   },
+   "ratios": [
+    {
+     "annee": 2023,
+     "pe": null,
+     "ps": 0.6,
+     "pfcf": 57.8,
+     "pb": 1.1,
+     "evebitda": 16.4
+    },
+    {
+     "annee": 2024,
+     "pe": null,
+     "ps": 0.3,
+     "pfcf": null,
+     "pb": 0.7,
+     "evebitda": 11.9
+    },
+    {
+     "annee": 2025,
+     "pe": 65.7,
+     "ps": 0.5,
+     "pfcf": 19.2,
+     "pb": 0.9,
+     "evebitda": 8.5
+    },
+    {
+     "annee": 2026,
+     "pe": 40.4,
+     "ps": 0.6,
+     "pfcf": 34.6,
+     "pb": 1.1,
+     "evebitda": 9.5
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "MT.AS",
    "nom": "ARCELORMITTAL SA",
    "secteur": "Basic Materials",
    "devise": "EUR",
-   "cours": 56.18,
-   "var": 3.7296906,
-   "per": 27.674877,
+   "cours": 56.8,
+   "var": 4.8762455,
+   "per": 27.980295,
    "ca": 62846001152,
    "resultat": 1812000000,
-   "cac40": true
+   "div_rate": 0.54,
+   "payout": 0.24260001,
+   "cac40": true,
+   "divs": {
+    "2018": 0.0842,
+    "2019": 0.1776,
+    "2021": 0.2459,
+    "2022": 0.3375,
+    "2023": 0.3908,
+    "2024": 0.4441,
+    "2025": 0.4885,
+    "2026": 0.3965
+   },
+   "events": {
+    "resultats": "2026-11-05",
+    "detachement": "2026-11-12"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 2.4,
+     "ps": 0.2,
+     "pfcf": 2.9,
+     "pb": 0.4,
+     "evebitda": 1.6
+    },
+    {
+     "annee": 2023,
+     "pe": 23.6,
+     "ps": 0.3,
+     "pfcf": 6.9,
+     "pb": 0.4,
+     "evebitda": 5.2
+    },
+    {
+     "annee": 2024,
+     "pe": 13.3,
+     "ps": 0.3,
+     "pfcf": 38.6,
+     "pb": 0.4,
+     "evebitda": 3.7
+    },
+    {
+     "annee": 2025,
+     "pe": 9.5,
+     "ps": 0.5,
+     "pfcf": 63.2,
+     "pb": 0.5,
+     "evebitda": 5.3
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "CS.PA",
    "nom": "AXA",
    "secteur": "Financial Services",
    "devise": "EUR",
-   "cours": 44.08,
-   "var": 2.3936849,
-   "per": 11.881402,
+   "cours": 44.31,
+   "var": 2.9268343,
+   "per": 11.943397,
    "ca": 96794001408,
    "resultat": 7654000128,
-   "cac40": true
+   "div_rate": 2.32,
+   "payout": 0.6253,
+   "cac40": true,
+   "divs": {
+    "2016": 1.1,
+    "2017": 1.16,
+    "2018": 1.26,
+    "2019": 1.34,
+    "2020": 0.73,
+    "2021": 1.43,
+    "2022": 1.54,
+    "2023": 1.7,
+    "2024": 1.98,
+    "2025": 2.15,
+    "2026": 2.32
+   },
+   "events": {
+    "detachement": "2026-05-11"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 12.3,
+     "ps": 0.7,
+     "pfcf": 7.1,
+     "pb": 1.3,
+     "evebitda": null
+    },
+    {
+     "annee": 2023,
+     "pe": 8.9,
+     "ps": 0.7,
+     "pfcf": 18.7,
+     "pb": 1.3,
+     "evebitda": null
+    },
+    {
+     "annee": 2024,
+     "pe": 9.5,
+     "ps": 0.7,
+     "pfcf": 6.2,
+     "pb": 1.5,
+     "evebitda": null
+    },
+    {
+     "annee": 2025,
+     "pe": 8.6,
+     "ps": 0.8,
+     "pfcf": 3.8,
+     "pb": 1.8,
+     "evebitda": null
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "BNP.PA",
    "nom": "BNP PARIBAS ACT.A",
    "secteur": "Financial Services",
    "devise": "EUR",
-   "cours": 91.43,
-   "var": 4.3604813,
-   "per": 7.999125,
+   "cours": 92.13,
+   "var": 5.1586356,
+   "per": 8.060367,
    "ca": 52680998912,
    "resultat": 13285000192,
-   "cac40": true
+   "div_rate": 6.46,
+   "payout": 0.5073,
+   "cac40": true,
+   "divs": {
+    "2016": 2.31,
+    "2017": 2.7,
+    "2018": 3.02,
+    "2019": 3.02,
+    "2021": 2.66,
+    "2022": 3.67,
+    "2023": 3.9,
+    "2024": 4.6,
+    "2025": 7.38,
+    "2026": 5.8
+   },
+   "events": {
+    "resultats": "2026-10-28",
+    "detachement": "2026-09-24"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 7.1,
+     "ps": 1.1,
+     "pfcf": null,
+     "pb": 0.5,
+     "evebitda": null
+    },
+    {
+     "annee": 2023,
+     "pe": 7.3,
+     "ps": 1.2,
+     "pfcf": null,
+     "pb": 0.6,
+     "evebitda": null
+    },
+    {
+     "annee": 2024,
+     "pe": 6.2,
+     "ps": 1.0,
+     "pfcf": null,
+     "pb": 0.5,
+     "evebitda": null
+    },
+    {
+     "annee": 2025,
+     "pe": 7.9,
+     "ps": 1.3,
+     "pfcf": 2.0,
+     "pb": 0.7,
+     "evebitda": null
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "EN.PA",
    "nom": "BOUYGUES",
    "secteur": "Industrials",
    "devise": "EUR",
-   "cours": 41.96,
-   "var": 2.266635,
-   "per": 12.792683,
+   "cours": 41.93,
+   "var": 2.1935208,
+   "per": 12.783537,
    "ca": 56328998912,
    "resultat": 1252000000,
-   "cac40": true
+   "div_rate": 2.1,
+   "payout": 0.6422,
+   "cac40": true,
+   "divs": {
+    "2016": 1.6,
+    "2017": 1.6,
+    "2018": 1.7,
+    "2019": 1.7,
+    "2020": 1.7,
+    "2021": 1.7,
+    "2022": 1.8,
+    "2023": 1.8,
+    "2024": 1.9,
+    "2025": 2.0,
+    "2026": 2.1
+   },
+   "events": {
+    "resultats": "2026-11-05",
+    "detachement": "2026-04-28"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 11.0,
+     "ps": 0.2,
+     "pfcf": 42.1,
+     "pb": 0.9,
+     "evebitda": 4.6
+    },
+    {
+     "annee": 2023,
+     "pe": 12.3,
+     "ps": 0.2,
+     "pfcf": 4.8,
+     "pb": 1.0,
+     "evebitda": 4.3
+    },
+    {
+     "annee": 2024,
+     "pe": 10.2,
+     "ps": 0.2,
+     "pfcf": 4.0,
+     "pb": 0.8,
+     "evebitda": 3.7
+    },
+    {
+     "annee": 2025,
+     "pe": 14.8,
+     "ps": 0.3,
+     "pfcf": 5.7,
+     "pb": 1.3,
+     "evebitda": 4.3
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "CAP.PA",
    "nom": "CAPGEMINI",
    "secteur": "Technology",
    "devise": "EUR",
-   "cours": 126.65,
-   "var": 1.1576884,
-   "per": 16.092758,
+   "cours": 127.6,
+   "var": 1.9169341,
+   "per": 16.213469,
    "ca": 23439998976,
    "resultat": 1375000064,
-   "cac40": true
+   "div_rate": 3.4,
+   "payout": 0.432,
+   "cac40": true,
+   "divs": {
+    "2016": 1.35,
+    "2017": 1.55,
+    "2018": 1.7,
+    "2019": 1.7,
+    "2020": 1.35,
+    "2021": 1.95,
+    "2022": 2.4,
+    "2023": 3.25,
+    "2024": 3.4,
+    "2025": 3.4,
+    "2026": 3.4
+   },
+   "events": {
+    "detachement": "2026-06-02"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 17.7,
+     "ps": 1.2,
+     "pfcf": 12.0,
+     "pb": 2.8,
+     "evebitda": 9.7
+    },
+    {
+     "annee": 2023,
+     "pe": 20.1,
+     "ps": 1.4,
+     "pfcf": 14.3,
+     "pb": 3.1,
+     "evebitda": 11.1
+    },
+    {
+     "annee": 2024,
+     "pe": 16.7,
+     "ps": 1.2,
+     "pfcf": 12.2,
+     "pb": 2.3,
+     "evebitda": 9.3
+    },
+    {
+     "annee": 2025,
+     "pe": 15.6,
+     "ps": 1.1,
+     "pfcf": 11.0,
+     "pb": 2.1,
+     "evebitda": 10.0
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "CA.PA",
    "nom": "CARREFOUR",
    "secteur": "Consumer Defensive",
    "devise": "EUR",
-   "cours": 13.29,
-   "var": 1.6443607,
-   "per": 6.181395,
+   "cours": 13.31,
+   "var": 1.7973279,
+   "per": 6.1906977,
    "ca": 84606001152,
    "resultat": 911000000,
-   "cac40": true
+   "div_rate": 0.97,
+   "payout": 0.7462,
+   "cac40": true,
+   "divs": {
+    "2016": 0.7,
+    "2017": 0.7,
+    "2018": 0.46,
+    "2019": 0.46,
+    "2020": 0.23,
+    "2021": 0.48,
+    "2022": 0.52,
+    "2023": 0.56,
+    "2024": 0.87,
+    "2025": 1.15,
+    "2026": 1.18
+   },
+   "events": {
+    "detachement": "2026-07-28"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 8.7,
+     "ps": 0.1,
+     "pfcf": 4.9,
+     "pb": 1.0,
+     "evebitda": 4.2
+    },
+    {
+     "annee": 2023,
+     "pe": 7.2,
+     "ps": 0.1,
+     "pfcf": 4.3,
+     "pb": 1.0,
+     "evebitda": 2.3
+    },
+    {
+     "annee": 2024,
+     "pe": 12.8,
+     "ps": 0.1,
+     "pfcf": 3.6,
+     "pb": 0.8,
+     "evebitda": 1.7
+    },
+    {
+     "annee": 2025,
+     "pe": 30.3,
+     "ps": 0.1,
+     "pfcf": 4.1,
+     "pb": 0.9,
+     "evebitda": 2.0
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "ACA.PA",
    "nom": "CREDIT AGRICOLE",
    "secteur": "Financial Services",
    "devise": "EUR",
-   "cours": 15.515,
-   "var": 3.295605,
-   "per": 7.9158163,
+   "cours": 15.56,
+   "var": 3.595206,
+   "per": 7.9387755,
    "ca": 27382999040,
    "resultat": 6246000128,
-   "cac40": true
+   "div_rate": 1.7,
+   "payout": 0.5713,
+   "cac40": true,
+   "divs": {
+    "2016": 0.5778,
+    "2017": 0.5778,
+    "2018": 0.63,
+    "2019": 0.69,
+    "2021": 0.8,
+    "2022": 1.05,
+    "2023": 1.05,
+    "2024": 1.05,
+    "2025": 1.1,
+    "2026": 1.7
+   },
+   "events": {
+    "resultats": "2026-10-30",
+    "detachement": "2026-10-13"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 6.0,
+     "ps": 1.4,
+     "pfcf": 70.6,
+     "pb": 0.4,
+     "evebitda": null
+    },
+    {
+     "annee": 2023,
+     "pe": 6.6,
+     "ps": 1.7,
+     "pfcf": null,
+     "pb": 0.5,
+     "evebitda": null
+    },
+    {
+     "annee": 2024,
+     "pe": 6.3,
+     "ps": 1.6,
+     "pfcf": null,
+     "pb": 0.5,
+     "evebitda": null
+    },
+    {
+     "annee": 2025,
+     "pe": 6.1,
+     "ps": 2.0,
+     "pfcf": 3.0,
+     "pb": 0.7,
+     "evebitda": null
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "BN.PA",
    "nom": "DANONE",
    "secteur": "Consumer Defensive",
    "devise": "EUR",
-   "cours": 66.44,
-   "var": 0.6361797,
-   "per": 22.0,
+   "cours": 66.56,
+   "var": 0.8179354,
+   "per": 22.039734,
    "ca": 27481999360,
    "resultat": 1944999936,
-   "cac40": true
+   "div_rate": 2.25,
+   "payout": 0.745,
+   "cac40": true,
+   "divs": {
+    "2016": 1.6,
+    "2017": 1.7,
+    "2018": 1.9,
+    "2019": 1.94,
+    "2020": 2.1,
+    "2021": 1.94,
+    "2022": 1.94,
+    "2023": 2.0,
+    "2024": 2.1,
+    "2025": 2.15,
+    "2026": 2.25
+   },
+   "events": {
+    "detachement": "2026-05-04"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 33.3,
+     "ps": 1.1,
+     "pfcf": 15.1,
+     "pb": 1.8,
+     "evebitda": 11.1
+    },
+    {
+     "annee": 2023,
+     "pe": 43.1,
+     "ps": 1.4,
+     "pfcf": 14.5,
+     "pb": 2.3,
+     "evebitda": 13.4
+    },
+    {
+     "annee": 2024,
+     "pe": 20.8,
+     "ps": 1.5,
+     "pfcf": 14.4,
+     "pb": 2.4,
+     "evebitda": 11.5
+    },
+    {
+     "annee": 2025,
+     "pe": 27.2,
+     "ps": 1.8,
+     "pfcf": 18.0,
+     "pb": 2.9,
+     "evebitda": 14.0
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "DSY.PA",
    "nom": "DASSAULT SYSTEMES",
    "secteur": "Technology",
    "devise": "EUR",
-   "cours": 25.19,
-   "var": 0.84067655,
-   "per": 25.444445,
+   "cours": 25.31,
+   "var": 1.3210566,
+   "per": 25.565657,
    "ca": 6298100224,
    "resultat": 1339600000,
-   "cac40": true
+   "div_rate": 0.27,
+   "payout": 0.2727,
+   "cac40": true,
+   "divs": {
+    "2016": 0.094,
+    "2017": 0.106,
+    "2018": 0.116,
+    "2019": 0.13,
+    "2020": 0.14,
+    "2021": 0.112,
+    "2022": 0.17,
+    "2023": 0.21,
+    "2024": 0.23,
+    "2025": 0.26,
+    "2026": 0.27
+   },
+   "events": {
+    "resultats": "2026-10-28",
+    "detachement": "2026-05-27"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 47.8,
+     "ps": 7.8,
+     "pfcf": 31.6,
+     "pb": 6.0,
+     "evebitda": 23.1
+    },
+    {
+     "annee": 2023,
+     "pe": 56.0,
+     "ps": 9.8,
+     "pfcf": 41.0,
+     "pb": 7.4,
+     "evebitda": 30.4
+    },
+    {
+     "annee": 2024,
+     "pe": 37.2,
+     "ps": 7.1,
+     "pfcf": 30.0,
+     "pb": 4.9,
+     "evebitda": 20.5
+    },
+    {
+     "annee": 2025,
+     "pe": 26.5,
+     "ps": 5.0,
+     "pfcf": 21.4,
+     "pb": 3.6,
+     "evebitda": 14.9
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "EDEN.PA",
    "nom": "EDENRED",
    "secteur": "Financial Services",
    "devise": "EUR",
-   "cours": 24.15,
-   "var": 0.8350683,
-   "per": 11.723301,
+   "cours": 24.34,
+   "var": 1.6297508,
+   "per": 11.815535,
    "ca": 2753999872,
    "resultat": 500000000,
-   "cac40": true
+   "div_rate": 1.33,
+   "payout": 0.64559996,
+   "cac40": true,
+   "divs": {
+    "2016": 0.84,
+    "2017": 0.31,
+    "2018": 0.85,
+    "2019": 0.86,
+    "2020": 0.7,
+    "2021": 0.75,
+    "2022": 0.9,
+    "2023": 1.0,
+    "2024": 1.1,
+    "2025": 1.21,
+    "2026": 1.33
+   },
+   "events": {
+    "detachement": "2026-06-10"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 34.8,
+     "ps": 6.2,
+     "pfcf": 14.7,
+     "pb": null,
+     "evebitda": 17.7
+    },
+    {
+     "annee": 2023,
+     "pe": 50.5,
+     "ps": 5.4,
+     "pfcf": 15.6,
+     "pb": null,
+     "evebitda": 16.1
+    },
+    {
+     "annee": 2024,
+     "pe": 15.0,
+     "ps": 2.7,
+     "pfcf": 9.4,
+     "pb": null,
+     "evebitda": 9.0
+    },
+    {
+     "annee": 2025,
+     "pe": 8.5,
+     "ps": 1.5,
+     "pfcf": 4.2,
+     "pb": null,
+     "evebitda": 5.8
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "ENGI.PA",
    "nom": "ENGIE",
    "secteur": "Utilities",
    "devise": "EUR",
-   "cours": 23.91,
-   "var": 2.5300179,
-   "per": 14.668712,
+   "cours": 23.93,
+   "var": 2.6157832,
+   "per": 14.680982,
    "ca": 70584999936,
    "resultat": 4064999936,
-   "cac40": true
+   "div_rate": 1.35,
+   "payout": 0.8282,
+   "cac40": true,
+   "divs": {
+    "2016": 1.0,
+    "2017": 0.85,
+    "2018": 0.72,
+    "2019": 0.75,
+    "2021": 0.53,
+    "2022": 0.85,
+    "2023": 1.4,
+    "2024": 1.43,
+    "2025": 1.48,
+    "2026": 1.35
+   },
+   "events": {
+    "resultats": "2026-11-05",
+    "detachement": "2026-04-30"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 223.1,
+     "ps": 0.3,
+     "pfcf": 14.7,
+     "pb": 0.9,
+     "evebitda": 7.2
+    },
+    {
+     "annee": 2023,
+     "pe": 18.3,
+     "ps": 0.5,
+     "pfcf": 6.7,
+     "pb": 1.3,
+     "evebitda": 4.0
+    },
+    {
+     "annee": 2024,
+     "pe": 9.3,
+     "ps": 0.5,
+     "pfcf": 9.9,
+     "pb": 1.1,
+     "evebitda": 4.5
+    },
+    {
+     "annee": 2025,
+     "pe": 14.8,
+     "ps": 0.8,
+     "pfcf": null,
+     "pb": 1.7,
+     "evebitda": 6.6
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "EL.PA",
    "nom": "ESSILORLUXOTTICA",
    "secteur": "Healthcare",
    "devise": "EUR",
-   "cours": 183.2,
-   "var": -0.57003427,
-   "per": 34.242992,
+   "cours": 183.85,
+   "var": -0.21709302,
+   "per": 34.364487,
    "ca": 29284999168,
    "resultat": 2494000128,
-   "cac40": true
+   "div_rate": 4.0,
+   "payout": 0.7477,
+   "cac40": true,
+   "divs": {
+    "2016": 1.11,
+    "2017": 1.5,
+    "2018": 1.53,
+    "2019": 2.04,
+    "2020": 1.15,
+    "2021": 1.08,
+    "2022": 2.51,
+    "2023": 3.23,
+    "2024": 3.95,
+    "2025": 3.95,
+    "2026": 4.0
+   },
+   "events": {
+    "detachement": "2026-05-05"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 34.3,
+     "ps": 3.0,
+     "pfcf": 23.0,
+     "pb": 2.0,
+     "evebitda": 13.7
+    },
+    {
+     "annee": 2023,
+     "pe": 35.0,
+     "ps": 3.2,
+     "pfcf": 24.1,
+     "pb": 2.1,
+     "evebitda": 14.6
+    },
+    {
+     "annee": 2024,
+     "pe": 45.9,
+     "ps": 4.1,
+     "pfcf": 32.1,
+     "pb": 2.7,
+     "evebitda": 18.0
+    },
+    {
+     "annee": 2025,
+     "pe": 54.2,
+     "ps": 4.4,
+     "pfcf": 33.2,
+     "pb": 3.2,
+     "evebitda": 20.6
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "ERF.PA",
    "nom": "EUROFINS SCIENT.",
    "secteur": "Healthcare",
    "devise": "EUR",
-   "cours": 88.04,
-   "var": 0.9172244,
-   "per": 30.569443,
+   "cours": 88.06,
+   "var": 0.9399355,
+   "per": 30.576387,
    "ca": 7385500160,
    "resultat": 469900000,
-   "cac40": true
+   "div_rate": 0.72,
+   "payout": 0.25,
+   "cac40": true,
+   "divs": {
+    "2016": 0.145,
+    "2017": 0.2,
+    "2018": 0.24,
+    "2019": 0.288,
+    "2021": 0.68,
+    "2022": 1.0,
+    "2023": 1.0,
+    "2024": 0.5,
+    "2025": 0.6,
+    "2026": 0.72
+   },
+   "events": {
+    "detachement": "2026-04-28"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 21.8,
+     "ps": 1.9,
+     "pfcf": 27.1,
+     "pb": 2.7,
+     "evebitda": 10.5
+    },
+    {
+     "annee": 2023,
+     "pe": 37.6,
+     "ps": 1.7,
+     "pfcf": 24.2,
+     "pb": 2.2,
+     "evebitda": 11.5
+    },
+    {
+     "annee": 2024,
+     "pe": 23.6,
+     "ps": 1.3,
+     "pfcf": 11.7,
+     "pb": 1.7,
+     "evebitda": 8.7
+    },
+    {
+     "annee": 2025,
+     "pe": 24.5,
+     "ps": 1.5,
+     "pfcf": 19.5,
+     "pb": 2.4,
+     "evebitda": 9.6
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "RMS.PA",
    "nom": "HERMES INTL",
    "secteur": "Consumer Cyclical",
    "devise": "EUR",
-   "cours": 1337.0,
-   "var": 1.8666667,
-   "per": 31.093023,
+   "cours": 1343.0,
+   "var": 2.3238096,
+   "per": 31.232557,
    "ca": 16131000320,
    "resultat": 4515999744,
-   "cac40": true
+   "div_rate": 18.0,
+   "payout": 0.4186,
+   "cac40": true,
+   "divs": {
+    "2016": 3.35,
+    "2017": 3.75,
+    "2018": 9.1,
+    "2019": 4.55,
+    "2020": 4.55,
+    "2021": 4.55,
+    "2022": 8.0,
+    "2023": 13.0,
+    "2024": 25.0,
+    "2025": 26.0,
+    "2026": 18.0
+   },
+   "events": {
+    "detachement": "2026-04-21"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 45.0,
+     "ps": 13.0,
+     "pfcf": 41.2,
+     "pb": 12.1,
+     "evebitda": 26.6
+    },
+    {
+     "annee": 2023,
+     "pe": 46.7,
+     "ps": 15.0,
+     "pfcf": 57.9,
+     "pb": 13.2,
+     "evebitda": 28.9
+    },
+    {
+     "annee": 2024,
+     "pe": 52.9,
+     "ps": 16.0,
+     "pfcf": 59.8,
+     "pb": 14.0,
+     "evebitda": 31.9
+    },
+    {
+     "annee": 2025,
+     "pe": 49.3,
+     "ps": 13.9,
+     "pfcf": 52.8,
+     "pb": 11.8,
+     "evebitda": 27.4
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "KER.PA",
    "nom": "KERING",
    "secteur": "Consumer Cyclical",
    "devise": "EUR",
-   "cours": 186.78,
-   "var": 3.6284914,
+   "cours": 187.4,
+   "var": 3.9724746,
    "per": null,
    "ca": 14456000512,
    "resultat": -322000000,
-   "cac40": true
+   "div_rate": 3.0,
+   "payout": 1.2766,
+   "cac40": true,
+   "divs": {
+    "2016": 4.0,
+    "2017": 4.6,
+    "2018": 6.0,
+    "2019": 10.5,
+    "2020": 8.0,
+    "2021": 8.0,
+    "2022": 12.0,
+    "2023": 14.0,
+    "2024": 14.0,
+    "2025": 6.0,
+    "2026": 4.0
+   },
+   "events": {
+    "detachement": "2026-06-02"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 16.2,
+     "ps": 2.9,
+     "pfcf": 18.1,
+     "pb": 4.2,
+     "evebitda": 9.3
+    },
+    {
+     "annee": 2023,
+     "pe": 16.4,
+     "ps": 2.5,
+     "pfcf": 26.5,
+     "pb": 3.2,
+     "evebitda": 9.7
+    },
+    {
+     "annee": 2024,
+     "pe": 25.8,
+     "ps": 1.7,
+     "pfcf": 20.9,
+     "pb": 2.0,
+     "evebitda": 10.7
+    },
+    {
+     "annee": 2025,
+     "pe": 510.2,
+     "ps": 2.5,
+     "pfcf": 16.3,
+     "pb": 2.5,
+     "evebitda": 16.3
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "OR.PA",
    "nom": "L'OREAL",
    "secteur": "Consumer Defensive",
    "devise": "EUR",
-   "cours": 436.2,
-   "var": 0.808968,
-   "per": 37.028866,
+   "cours": 439.45,
+   "var": 1.559792,
+   "per": 37.304756,
    "ca": 45354799104,
    "resultat": 6306299904,
-   "cac40": true
+   "div_rate": 7.2,
+   "payout": 0.6112,
+   "cac40": true,
+   "divs": {
+    "2016": 3.1,
+    "2017": 3.3,
+    "2018": 3.55,
+    "2019": 3.85,
+    "2020": 3.85,
+    "2021": 4.0,
+    "2022": 4.8,
+    "2023": 6.0,
+    "2024": 6.6,
+    "2025": 7.0,
+    "2026": 7.2
+   },
+   "events": {
+    "detachement": "2026-04-29"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 31.4,
+     "ps": 4.7,
+     "pfcf": 36.2,
+     "pb": 6.6,
+     "evebitda": 19.7
+    },
+    {
+     "annee": 2023,
+     "pe": 39.1,
+     "ps": 5.9,
+     "pfcf": 39.4,
+     "pb": 8.3,
+     "evebitda": 24.7
+    },
+    {
+     "annee": 2024,
+     "pe": 28.6,
+     "ps": 4.2,
+     "pfcf": 27.5,
+     "pb": 5.5,
+     "evebitda": 17.5
+    },
+    {
+     "annee": 2025,
+     "pe": 32.0,
+     "ps": 4.4,
+     "pfcf": 27.3,
+     "pb": 5.6,
+     "evebitda": 18.5
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "LR.PA",
    "nom": "LEGRAND",
    "secteur": "Industrials",
    "devise": "EUR",
-   "cours": 134.2,
-   "var": 0.29906085,
-   "per": 27.221096,
+   "cours": 133.15,
+   "var": -0.48580652,
+   "per": 27.008114,
    "ca": 10106600448,
    "resultat": 1314700032,
-   "cac40": true
+   "div_rate": 2.38,
+   "payout": 0.47919998,
+   "cac40": true,
+   "divs": {
+    "2016": 1.141,
+    "2017": 0.79,
+    "2018": 0.93,
+    "2019": 1.34,
+    "2020": 1.34,
+    "2021": 1.42,
+    "2022": 1.65,
+    "2023": 1.9,
+    "2024": 2.09,
+    "2025": 2.2,
+    "2026": 2.38
+   },
+   "events": {
+    "resultats": "2026-11-05",
+    "detachement": "2026-05-29"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 20.1,
+     "ps": 2.4,
+     "pfcf": 19.4,
+     "pb": 3.0,
+     "evebitda": 11.9
+    },
+    {
+     "annee": 2023,
+     "pe": 21.9,
+     "ps": 2.9,
+     "pfcf": 15.6,
+     "pb": 3.7,
+     "evebitda": 13.1
+    },
+    {
+     "annee": 2024,
+     "pe": 21.3,
+     "ps": 2.9,
+     "pfcf": 19.2,
+     "pb": 3.3,
+     "evebitda": 13.1
+    },
+    {
+     "annee": 2025,
+     "pe": 27.0,
+     "ps": 3.5,
+     "pfcf": 25.1,
+     "pb": 4.6,
+     "evebitda": 16.5
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "MC.PA",
    "nom": "LVMH",
    "secteur": "Consumer Cyclical",
    "devise": "EUR",
-   "cours": 406.8,
-   "var": 1.3202112,
-   "per": 18.912132,
+   "cours": 407.85,
+   "var": 1.5813737,
+   "per": 18.960949,
    "ca": 79641001984,
    "resultat": 10876999680,
-   "cac40": true
+   "div_rate": 13.0,
+   "payout": 0.5925,
+   "cac40": true,
+   "divs": {
+    "2016": 3.6,
+    "2017": 4.2,
+    "2018": 5.4,
+    "2019": 6.2,
+    "2020": 4.6,
+    "2021": 7.0,
+    "2022": 12.0,
+    "2023": 12.5,
+    "2024": 13.0,
+    "2025": 13.0,
+    "2026": 7.5
+   },
+   "events": {
+    "detachement": "2026-12-01"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 24.3,
+     "ps": 4.3,
+     "pfcf": 26.7,
+     "pb": 6.2,
+     "evebitda": 13.8
+    },
+    {
+     "annee": 2023,
+     "pe": 24.2,
+     "ps": 4.3,
+     "pfcf": 34.6,
+     "pb": 6.0,
+     "evebitda": 13.4
+    },
+    {
+     "annee": 2024,
+     "pe": 25.3,
+     "ps": 3.7,
+     "pfcf": 23.7,
+     "pb": 4.7,
+     "evebitda": 12.9
+    },
+    {
+     "annee": 2025,
+     "pe": 29.5,
+     "ps": 4.0,
+     "pfcf": 22.5,
+     "pb": 4.7,
+     "evebitda": 13.5
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "ML.PA",
    "nom": "MICHELIN",
    "secteur": "Autre",
    "devise": "EUR",
-   "cours": 33.25,
-   "var": 2.528522,
-   "per": 3.2470703,
+   "cours": 33.33,
+   "var": 2.7752128,
+   "per": 3.254883,
    "ca": null,
    "resultat": null,
-   "cac40": true
+   "div_rate": null,
+   "payout": null,
+   "cac40": true,
+   "divs": {
+    "2016": 0.7125,
+    "2017": 0.8125,
+    "2018": 0.8875,
+    "2019": 0.925,
+    "2020": 0.5,
+    "2021": 0.575,
+    "2022": 1.125,
+    "2023": 1.25,
+    "2024": 1.35,
+    "2025": 1.38,
+    "2026": 1.38
+   },
+   "events": {},
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 9.3,
+     "ps": 0.6,
+     "pfcf": null,
+     "pb": 1.1,
+     "evebitda": 4.7
+    },
+    {
+     "annee": 2023,
+     "pe": 11.7,
+     "ps": 0.8,
+     "pfcf": 7.7,
+     "pb": 1.3,
+     "evebitda": 5.5
+    },
+    {
+     "annee": 2024,
+     "pe": 12.0,
+     "ps": 0.8,
+     "pfcf": 10.8,
+     "pb": 1.2,
+     "evebitda": 5.4
+    },
+    {
+     "annee": 2025,
+     "pe": 12.2,
+     "ps": 0.7,
+     "pfcf": 10.9,
+     "pb": 1.1,
+     "evebitda": 4.8
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "ORA.PA",
    "nom": "ORANGE",
    "secteur": "Communication Services",
    "devise": "EUR",
-   "cours": 14.94,
-   "var": 1.6326516,
-   "per": 3.679803,
+   "cours": 14.96,
+   "var": 1.7687091,
+   "per": 3.684729,
    "ca": 41491001344,
    "resultat": 3974000128,
-   "cac40": true
+   "div_rate": 0.75,
+   "payout": 0.64239997,
+   "cac40": true,
+   "divs": {
+    "2016": 0.6,
+    "2017": 0.65,
+    "2018": 0.7,
+    "2019": 0.7,
+    "2020": 0.6,
+    "2021": 0.8,
+    "2022": 0.7,
+    "2023": 0.7,
+    "2024": 0.72,
+    "2025": 0.75,
+    "2026": 0.45
+   },
+   "events": {
+    "resultats": "2026-10-27",
+    "detachement": "2026-12-01"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 12.7,
+     "ps": 0.6,
+     "pfcf": 10.0,
+     "pb": 0.8,
+     "evebitda": 2.0
+    },
+    {
+     "annee": 2023,
+     "pe": 12.1,
+     "ps": 0.7,
+     "pfcf": 6.7,
+     "pb": 0.9,
+     "evebitda": 2.2
+    },
+    {
+     "annee": 2024,
+     "pe": 11.7,
+     "ps": 0.6,
+     "pfcf": 8.1,
+     "pb": 0.8,
+     "evebitda": 1.8
+    },
+    {
+     "annee": 2025,
+     "pe": 101.4,
+     "ps": 0.9,
+     "pfcf": 11.4,
+     "pb": 1.3,
+     "evebitda": 2.7
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "RI.PA",
    "nom": "PERNOD RICARD",
    "secteur": "Consumer Defensive",
    "devise": "EUR",
-   "cours": 68.4,
-   "var": 0.20509726,
-   "per": 14.339623,
+   "cours": 68.56,
+   "var": 0.43948933,
+   "per": 14.373165,
    "ca": 9404000256,
    "resultat": 1203000064,
-   "cac40": true
+   "div_rate": 4.7,
+   "payout": 0.9853,
+   "cac40": true,
+   "divs": {
+    "2016": 1.88,
+    "2017": 2.02,
+    "2018": 2.36,
+    "2019": 3.12,
+    "2020": 2.66,
+    "2021": 3.12,
+    "2022": 4.12,
+    "2023": 4.7,
+    "2024": 4.7,
+    "2025": 4.7,
+    "2026": 2.35
+   },
+   "events": {
+    "resultats": "2026-08-27",
+    "detachement": "2026-11-25"
+   },
+   "ratios": [
+    {
+     "annee": 2023,
+     "pe": 23.0,
+     "ps": 4.2,
+     "pfcf": 38.5,
+     "pb": 3.3,
+     "evebitda": 16.9
+    },
+    {
+     "annee": 2024,
+     "pe": 21.7,
+     "ps": 2.7,
+     "pfcf": 33.4,
+     "pb": 2.0,
+     "evebitda": 13.4
+    },
+    {
+     "annee": 2025,
+     "pe": 13.1,
+     "ps": 1.9,
+     "pfcf": 19.0,
+     "pb": 1.4,
+     "evebitda": 10.1
+    },
+    {
+     "annee": 2026,
+     "pe": null,
+     "ps": 1.7,
+     "pfcf": 13.5,
+     "pb": 1.0,
+     "evebitda": 10.2
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "PUB.PA",
    "nom": "PUBLICIS GROUPE SA",
    "secteur": "Communication Services",
    "devise": "EUR",
-   "cours": 102.2,
-   "var": 1.0375448,
-   "per": 15.943838,
+   "cours": 102.6,
+   "var": 1.4335115,
+   "per": 16.00624,
    "ca": 17649999872,
    "resultat": 1622000000,
-   "cac40": true
+   "div_rate": 3.75,
+   "payout": 0.5841,
+   "cac40": true,
+   "divs": {
+    "2016": 1.6,
+    "2017": 1.85,
+    "2019": 2.12,
+    "2020": 1.15,
+    "2021": 2.0,
+    "2022": 2.4,
+    "2023": 2.9,
+    "2024": 3.4,
+    "2025": 3.6,
+    "2026": 3.75
+   },
+   "events": {
+    "detachement": "2026-07-01"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 12.3,
+     "ps": 1.1,
+     "pfcf": 6.7,
+     "pb": 1.6,
+     "evebitda": 6.2
+    },
+    {
+     "annee": 2023,
+     "pe": 16.2,
+     "ps": 1.4,
+     "pfcf": 11.3,
+     "pb": 2.2,
+     "evebitda": 8.3
+    },
+    {
+     "annee": 2024,
+     "pe": 15.7,
+     "ps": 1.6,
+     "pfcf": 12.5,
+     "pb": 2.3,
+     "evebitda": 8.7
+    },
+    {
+     "annee": 2025,
+     "pe": 13.6,
+     "ps": 1.3,
+     "pfcf": 8.3,
+     "pb": 2.1,
+     "evebitda": 7.5
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "RNO.PA",
    "nom": "RENAULT",
    "secteur": "Consumer Cyclical",
    "devise": "EUR",
-   "cours": 27.91,
-   "var": 2.4596186,
-   "per": 8.535169,
+   "cours": 27.94,
+   "var": 2.5697532,
+   "per": 8.544343,
    "ca": 60534001664,
    "resultat": 947000000,
-   "cac40": true
+   "div_rate": 2.2,
+   "payout": 0.6728,
+   "cac40": true,
+   "divs": {
+    "2016": 2.4,
+    "2017": 3.15,
+    "2018": 3.55,
+    "2019": 3.55,
+    "2023": 0.25,
+    "2024": 1.85,
+    "2025": 2.2,
+    "2026": 2.2
+   },
+   "events": {
+    "detachement": "2026-05-08"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": null,
+     "ps": 0.2,
+     "pfcf": 9.8,
+     "pb": 0.3,
+     "evebitda": 8.5
+    },
+    {
+     "annee": 2023,
+     "pe": 4.6,
+     "ps": 0.2,
+     "pfcf": 7.7,
+     "pb": 0.4,
+     "evebitda": 8.8
+    },
+    {
+     "annee": 2024,
+     "pe": 18.1,
+     "ps": 0.2,
+     "pfcf": 3.3,
+     "pb": 0.5,
+     "evebitda": 12.2
+    },
+    {
+     "annee": 2025,
+     "pe": null,
+     "ps": 0.2,
+     "pfcf": null,
+     "pb": 0.5,
+     "evebitda": null
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "SAF.PA",
    "nom": "SAFRAN",
    "secteur": "Industrials",
    "devise": "EUR",
-   "cours": 292.3,
-   "var": 2.562298,
-   "per": 31.396345,
+   "cours": 292.35,
+   "var": 2.5784972,
+   "per": 31.401718,
    "ca": 33568999424,
    "resultat": 3881999872,
-   "cac40": true
+   "div_rate": 3.35,
+   "payout": 0.35979998,
+   "cac40": true,
+   "divs": {
+    "2016": 1.47,
+    "2017": 0.83,
+    "2018": 1.6,
+    "2019": 1.82,
+    "2021": 0.43,
+    "2022": 0.5,
+    "2023": 1.35,
+    "2024": 2.2,
+    "2025": 2.9,
+    "2026": 3.35
+   },
+   "events": {
+    "detachement": "2026-05-26"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": null,
+     "ps": 2.5,
+     "pfcf": 18.6,
+     "pb": 4.8,
+     "evebitda": null
+    },
+    {
+     "annee": 2023,
+     "pe": 33.9,
+     "ps": 2.8,
+     "pfcf": 22.4,
+     "pb": 5.7,
+     "evebitda": 10.3
+    },
+    {
+     "annee": 2024,
+     "pe": null,
+     "ps": 3.2,
+     "pfcf": 27.7,
+     "pb": 8.7,
+     "evebitda": 128.6
+    },
+    {
+     "annee": 2025,
+     "pe": 17.3,
+     "ps": 4.0,
+     "pfcf": 31.6,
+     "pb": 8.4,
+     "evebitda": 10.3
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "SGO.PA",
    "nom": "SAINT GOBAIN",
    "secteur": "Industrials",
    "devise": "EUR",
-   "cours": 72.74,
-   "var": 3.4414082,
-   "per": 13.495361,
+   "cours": 71.66,
+   "var": 1.904497,
+   "per": 13.2949915,
    "ca": 46226001920,
    "resultat": 2671000064,
-   "cac40": true
+   "div_rate": 2.3,
+   "payout": 0.4267,
+   "cac40": true,
+   "divs": {
+    "2016": 1.24,
+    "2017": 1.26,
+    "2018": 1.3,
+    "2019": 1.33,
+    "2021": 1.33,
+    "2022": 1.63,
+    "2023": 2.0,
+    "2024": 2.1,
+    "2025": 2.2,
+    "2026": 2.3
+   },
+   "events": {
+    "detachement": "2026-06-08"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 7.9,
+     "ps": 0.5,
+     "pfcf": 6.2,
+     "pb": 1.0,
+     "evebitda": 4.3
+    },
+    {
+     "annee": 2023,
+     "pe": 12.7,
+     "ps": 0.7,
+     "pfcf": 8.2,
+     "pb": 1.4,
+     "evebitda": 5.7
+    },
+    {
+     "annee": 2024,
+     "pe": 15.2,
+     "ps": 0.9,
+     "pfcf": 12.2,
+     "pb": 1.7,
+     "evebitda": 6.9
+    },
+    {
+     "annee": 2025,
+     "pe": 15.0,
+     "ps": 0.9,
+     "pfcf": 12.4,
+     "pb": 1.7,
+     "evebitda": 7.0
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "SAN.PA",
    "nom": "SANOFI",
    "secteur": "Healthcare",
    "devise": "EUR",
-   "cours": 82.05,
-   "var": 1.3211504,
-   "per": 23.713873,
+   "cours": 82.44,
+   "var": 1.8029131,
+   "per": 23.82659,
    "ca": 50981998592,
    "resultat": 4139000064,
-   "cac40": true
+   "div_rate": 4.12,
+   "payout": 1.1908001,
+   "cac40": true,
+   "divs": {
+    "2016": 2.93,
+    "2017": 2.96,
+    "2018": 3.03,
+    "2019": 3.07,
+    "2020": 3.15,
+    "2021": 3.2,
+    "2022": 3.33,
+    "2023": 3.56,
+    "2024": 3.76,
+    "2025": 3.92,
+    "2026": 4.12
+   },
+   "events": {
+    "resultats": "2027-01-28",
+    "detachement": "2026-05-05"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 16.7,
+     "ps": 2.8,
+     "pfcf": 13.4,
+     "pb": 1.5,
+     "evebitda": 9.0
+    },
+    {
+     "annee": 2023,
+     "pe": 20.8,
+     "ps": 2.7,
+     "pfcf": 15.3,
+     "pb": 1.5,
+     "evebitda": 10.8
+    },
+    {
+     "annee": 2024,
+     "pe": 20.4,
+     "ps": 2.7,
+     "pfcf": 20.0,
+     "pb": 1.5,
+     "evebitda": 11.6
+    },
+    {
+     "annee": 2025,
+     "pe": 13.0,
+     "ps": 2.1,
+     "pfcf": 13.9,
+     "pb": 1.4,
+     "evebitda": 9.0
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "SU.PA",
    "nom": "SCHNEIDER ELECTRIC SE",
    "secteur": "Industrials",
    "devise": "EUR",
-   "cours": 238.6,
-   "var": -0.47966376,
-   "per": 28.677887,
+   "cours": 236.9,
+   "var": -1.1887408,
+   "per": 28.473558,
    "ca": 42041999360,
    "resultat": 4737999872,
-   "cac40": true
+   "div_rate": 4.2,
+   "payout": 0.5048,
+   "cac40": true,
+   "divs": {
+    "2016": 2.0,
+    "2017": 2.04,
+    "2018": 0.19,
+    "2019": 2.35,
+    "2020": 2.55,
+    "2021": 2.6,
+    "2022": 2.9,
+    "2023": 3.15,
+    "2024": 3.5,
+    "2025": 3.9,
+    "2026": 4.2
+   },
+   "events": {
+    "detachement": "2026-05-11"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 21.3,
+     "ps": 2.1,
+     "pfcf": 22.4,
+     "pb": 2.9,
+     "evebitda": 12.5
+    },
+    {
+     "annee": 2023,
+     "pe": 25.7,
+     "ps": 2.8,
+     "pfcf": 22.3,
+     "pb": 3.8,
+     "evebitda": 15.2
+    },
+    {
+     "annee": 2024,
+     "pe": 31.7,
+     "ps": 3.5,
+     "pfcf": 32.5,
+     "pb": 4.4,
+     "evebitda": 17.7
+    },
+    {
+     "annee": 2025,
+     "pe": 32.0,
+     "ps": 3.3,
+     "pfcf": 28.8,
+     "pb": 5.5,
+     "evebitda": 17.4
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "GLE.PA",
    "nom": "SOCIETE GENERALE",
    "secteur": "Financial Services",
    "devise": "EUR",
-   "cours": 64.21,
-   "var": 4.3216896,
-   "per": 7.8785276,
+   "cours": 64.63,
+   "var": 5.0056853,
+   "per": 7.9300613,
    "ca": 26538000384,
    "resultat": 6032000000,
-   "cac40": true
+   "div_rate": 1.75,
+   "payout": 0.2156,
+   "cac40": true,
+   "divs": {
+    "2016": 2.0,
+    "2017": 2.2,
+    "2018": 2.2,
+    "2019": 2.2,
+    "2021": 0.55,
+    "2022": 1.65,
+    "2023": 1.7,
+    "2024": 0.9,
+    "2025": 1.7,
+    "2026": 1.75
+   },
+   "events": {
+    "resultats": "2026-10-29",
+    "detachement": "2026-10-05"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 15.7,
+     "ps": 0.5,
+     "pfcf": 0.6,
+     "pb": 0.3,
+     "evebitda": null
+    },
+    {
+     "annee": 2023,
+     "pe": 11.1,
+     "ps": 0.4,
+     "pfcf": 0.7,
+     "pb": 0.3,
+     "evebitda": null
+    },
+    {
+     "annee": 2024,
+     "pe": 6.2,
+     "ps": 0.4,
+     "pfcf": null,
+     "pb": 0.3,
+     "evebitda": null
+    },
+    {
+     "annee": 2025,
+     "pe": 10.1,
+     "ps": 1.0,
+     "pfcf": null,
+     "pb": 0.7,
+     "evebitda": null
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "STLAP.PA",
    "nom": "STELLANTIS NV",
    "secteur": "Consumer Cyclical",
    "devise": "EUR",
-   "cours": 4.0415,
-   "var": -1.0405196,
+   "cours": 4.018,
+   "var": -1.6160623,
    "per": null,
    "ca": 161266008064,
    "resultat": -15528999936,
-   "cac40": true
+   "div_rate": null,
+   "payout": 0.611,
+   "cac40": true,
+   "divs": {
+    "2021": 2.3534,
+    "2022": 1.04,
+    "2023": 1.34,
+    "2024": 1.55,
+    "2025": 0.68
+   },
+   "events": {
+    "resultats": "2027-01-28",
+    "detachement": "2025-04-22"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 2.5,
+     "ps": 0.2,
+     "pfcf": 3.8,
+     "pb": 0.6,
+     "evebitda": 0.8
+    },
+    {
+     "annee": 2023,
+     "pe": 3.6,
+     "ps": 0.3,
+     "pfcf": 8.2,
+     "pb": 0.8,
+     "evebitda": 1.6
+    },
+    {
+     "annee": 2024,
+     "pe": 6.9,
+     "ps": 0.2,
+     "pfcf": null,
+     "pb": 0.4,
+     "evebitda": 3.1
+    },
+    {
+     "annee": 2025,
+     "pe": null,
+     "ps": 0.2,
+     "pfcf": null,
+     "pb": 0.5,
+     "evebitda": null
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "STMPA.PA",
    "nom": "STMICROELECTRONICS",
    "secteur": "Technology",
    "devise": "EUR",
-   "cours": 43.385,
-   "var": 0.66109914,
-   "per": 88.54081,
+   "cours": 43.015,
+   "var": -0.19721366,
+   "per": 87.78571,
    "ca": 13669000192,
    "resultat": 520000000,
-   "cac40": true
+   "div_rate": 0.32,
+   "payout": 0.6316,
+   "cac40": true,
+   "divs": {
+    "2016": 0.2487,
+    "2017": 0.2132,
+    "2018": 0.2132,
+    "2019": 0.2132,
+    "2020": 0.1652,
+    "2021": 0.1972,
+    "2022": 0.2132,
+    "2023": 0.2132,
+    "2024": 0.2931,
+    "2025": 0.3198,
+    "2026": 0.2398
+   },
+   "events": {
+    "resultats": "2027-01-28",
+    "detachement": "2026-12-14"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 7.0,
+     "ps": 1.8,
+     "pfcf": 19.0,
+     "pb": 2.3,
+     "evebitda": 5.2
+    },
+    {
+     "annee": 2023,
+     "pe": 10.1,
+     "ps": 2.4,
+     "pfcf": 28.1,
+     "pb": 2.4,
+     "evebitda": 6.4
+    },
+    {
+     "annee": 2024,
+     "pe": 14.6,
+     "ps": 1.6,
+     "pfcf": null,
+     "pb": 1.2,
+     "evebitda": 6.1
+    },
+    {
+     "annee": 2025,
+     "pe": 124.7,
+     "ps": 1.7,
+     "pfcf": null,
+     "pb": 1.1,
+     "evebitda": 8.4
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "TEP.PA",
    "nom": "TELEPERFORMANCE",
    "secteur": "Industrials",
    "devise": "EUR",
-   "cours": 80.2,
-   "var": -0.9632087,
-   "per": 10.139064,
+   "cours": 81.08,
+   "var": 0.123515904,
+   "per": 10.250317,
    "ca": 9976000512,
    "resultat": 464000000,
-   "cac40": true
+   "div_rate": 4.5,
+   "payout": 0.5689,
+   "cac40": true,
+   "divs": {
+    "2016": 1.2,
+    "2017": 1.3,
+    "2018": 1.85,
+    "2019": 1.9,
+    "2020": 2.4,
+    "2021": 2.4,
+    "2022": 3.3,
+    "2023": 3.85,
+    "2024": 3.85,
+    "2025": 4.2,
+    "2026": 4.5
+   },
+   "events": {
+    "detachement": "2026-05-26"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 20.7,
+     "ps": 1.6,
+     "pfcf": 13.1,
+     "pb": 3.6,
+     "evebitda": 9.6
+    },
+    {
+     "annee": 2023,
+     "pe": 13.2,
+     "ps": 1.0,
+     "pfcf": 7.0,
+     "pb": 1.9,
+     "evebitda": 7.8
+    },
+    {
+     "annee": 2024,
+     "pe": 9.5,
+     "ps": 0.5,
+     "pfcf": 3.1,
+     "pb": 1.1,
+     "evebitda": 4.6
+    },
+    {
+     "annee": 2025,
+     "pe": 7.4,
+     "ps": 0.4,
+     "pfcf": 2.6,
+     "pb": 0.9,
+     "evebitda": 4.2
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "HO.PA",
    "nom": "THALES",
    "secteur": "Industrials",
    "devise": "EUR",
-   "cours": 226.3,
-   "var": -2.8755352,
-   "per": 31.1708,
+   "cours": 225.9,
+   "var": -3.0472128,
+   "per": 31.1157,
    "ca": 22820499456,
    "resultat": 1495800064,
-   "cac40": true
+   "div_rate": 3.9,
+   "payout": 0.53720003,
+   "cac40": true,
+   "divs": {
+    "2016": 1.41,
+    "2017": 1.65,
+    "2018": 1.8,
+    "2019": 2.18,
+    "2020": 0.4,
+    "2021": 1.96,
+    "2022": 2.66,
+    "2023": 3.04,
+    "2024": 3.45,
+    "2025": 3.8,
+    "2026": 2.95
+   },
+   "events": {
+    "detachement": "2026-12-02"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 22.6,
+     "ps": 1.4,
+     "pfcf": 10.1,
+     "pb": 3.5,
+     "evebitda": 10.1
+    },
+    {
+     "annee": 2023,
+     "pe": 27.4,
+     "ps": 1.5,
+     "pfcf": 31.3,
+     "pb": 4.1,
+     "evebitda": 13.1
+    },
+    {
+     "annee": 2024,
+     "pe": 20.1,
+     "ps": 1.4,
+     "pfcf": 14.1,
+     "pb": 3.8,
+     "evebitda": 11.8
+    },
+    {
+     "annee": 2025,
+     "pe": 28.3,
+     "ps": 2.1,
+     "pfcf": 18.4,
+     "pb": 5.9,
+     "evebitda": 14.3
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "TTE.PA",
    "nom": "TOTALENERGIES",
    "secteur": "Energy",
    "devise": "EUR",
-   "cours": 82.82,
-   "var": 0.13299555,
-   "per": 9.497706,
+   "cours": 83.11,
+   "var": 0.4836193,
+   "per": 9.530963,
    "ca": 214396993536,
    "resultat": 22417000448,
-   "cac40": true
+   "div_rate": 3.6,
+   "payout": 0.4,
+   "cac40": true,
+   "divs": {
+    "2016": 2.44,
+    "2017": 2.47,
+    "2018": 2.52,
+    "2019": 1.94,
+    "2020": 2.68,
+    "2021": 2.64,
+    "2022": 3.67,
+    "2023": 2.86,
+    "2024": 3.06,
+    "2025": 4.13,
+    "2026": 2.6
+   },
+   "events": {
+    "resultats": "2026-10-29",
+    "detachement": "2026-12-31"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 7.5,
+     "ps": 0.6,
+     "pfcf": 4.6,
+     "pb": 1.3,
+     "evebitda": 2.9
+    },
+    {
+     "annee": 2023,
+     "pe": 7.1,
+     "ps": 0.7,
+     "pfcf": 6.3,
+     "pb": 1.2,
+     "evebitda": 3.3
+    },
+    {
+     "annee": 2024,
+     "pe": 8.0,
+     "ps": 0.6,
+     "pfcf": 7.5,
+     "pb": 1.0,
+     "evebitda": 3.4
+    },
+    {
+     "annee": 2025,
+     "pe": 9.6,
+     "ps": 0.7,
+     "pfcf": 11.5,
+     "pb": 1.0,
+     "evebitda": 4.0
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "URW.AS",
@@ -443,43 +2338,207 @@
    "per": null,
    "ca": null,
    "resultat": null,
-   "cac40": true
+   "div_rate": null,
+   "payout": null,
+   "cac40": true,
+   "divs": {},
+   "events": {},
+   "ratios": [],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "VIE.PA",
    "nom": "VEOLIA ENVIRON.",
    "secteur": "Industrials",
    "devise": "EUR",
-   "cours": 33.48,
-   "var": 1.6084939,
-   "per": 19.465117,
+   "cours": 33.47,
+   "var": 1.57815,
+   "per": 19.459303,
    "ca": 44541001728,
    "resultat": 1254000000,
-   "cac40": true
+   "div_rate": 1.5,
+   "payout": 0.8721,
+   "cac40": true,
+   "divs": {
+    "2016": 0.7038,
+    "2017": 0.7713,
+    "2018": 0.8099,
+    "2019": 0.887,
+    "2020": 0.4821,
+    "2021": 0.6749,
+    "2022": 1.0,
+    "2023": 1.12,
+    "2024": 1.25,
+    "2025": 1.4,
+    "2026": 1.5
+   },
+   "events": {
+    "detachement": "2026-05-11"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 24.0,
+     "ps": 0.4,
+     "pfcf": 4.1,
+     "pb": 1.4,
+     "evebitda": 5.5
+    },
+    {
+     "annee": 2023,
+     "pe": 24.0,
+     "ps": 0.5,
+     "pfcf": 4.1,
+     "pb": 1.7,
+     "evebitda": 5.6
+    },
+    {
+     "annee": 2024,
+     "pe": null,
+     "ps": 0.4,
+     "pfcf": 3.9,
+     "pb": 1.5,
+     "evebitda": 5.0
+    },
+    {
+     "annee": 2025,
+     "pe": 19.3,
+     "ps": 0.5,
+     "pfcf": 4.2,
+     "pb": 2.0,
+     "evebitda": 5.5
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "DG.PA",
    "nom": "VINCI",
    "secteur": "Industrials",
    "devise": "EUR",
-   "cours": 111.05,
-   "var": 2.0680146,
-   "per": 12.325194,
+   "cours": 110.95,
+   "var": 1.9760972,
+   "per": 12.314095,
    "ca": 75748999168,
    "resultat": 5085000192,
-   "cac40": true
+   "div_rate": 5.05,
+   "payout": 0.5549,
+   "cac40": true,
+   "divs": {
+    "2016": 1.9,
+    "2017": 2.16,
+    "2018": 2.51,
+    "2019": 2.71,
+    "2020": 1.25,
+    "2021": 2.69,
+    "2022": 3.25,
+    "2023": 4.05,
+    "2024": 4.5,
+    "2025": 4.75,
+    "2026": 5.05
+   },
+   "events": {
+    "detachement": "2026-10-13"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 12.5,
+     "ps": 0.8,
+     "pfcf": 8.9,
+     "pb": 2.0,
+     "evebitda": 6.7
+    },
+    {
+     "annee": 2023,
+     "pe": 13.9,
+     "ps": 0.9,
+     "pfcf": 9.0,
+     "pb": 2.3,
+     "evebitda": 6.7
+    },
+    {
+     "annee": 2024,
+     "pe": 11.8,
+     "ps": 0.8,
+     "pfcf": 7.3,
+     "pb": 1.9,
+     "evebitda": 6.0
+    },
+    {
+     "annee": 2025,
+     "pe": 13.9,
+     "ps": 0.9,
+     "pfcf": 8.3,
+     "pb": 2.2,
+     "evebitda": 6.4
+    }
+   ],
+   "slow_maj": "2026-11-04"
   },
   {
    "ticker": "BVI.PA",
    "nom": "BUREAU VERITAS",
    "secteur": "Industrials",
    "devise": "EUR",
-   "cours": 29.32,
-   "var": 0.5831907,
-   "per": 25.946903,
+   "cours": 29.42,
+   "var": 0.92624515,
+   "per": 26.035398,
    "ca": 6748100096,
    "resultat": 503600000,
-   "cac40": true
+   "div_rate": 0.92,
+   "payout": 0.8142,
+   "cac40": true,
+   "divs": {
+    "2016": 0.51,
+    "2017": 0.55,
+    "2018": 0.56,
+    "2019": 0.56,
+    "2021": 0.36,
+    "2022": 0.53,
+    "2023": 0.77,
+    "2024": 0.83,
+    "2025": 0.9,
+    "2026": 0.92
+   },
+   "events": {
+    "detachement": "2026-05-26"
+   },
+   "ratios": [
+    {
+     "annee": 2022,
+     "pe": 24.1,
+     "ps": 2.0,
+     "pfcf": 15.8,
+     "pb": 6.0,
+     "evebitda": 11.4
+    },
+    {
+     "annee": 2023,
+     "pe": 20.8,
+     "ps": 1.8,
+     "pfcf": 15.7,
+     "pb": 5.4,
+     "evebitda": 10.3
+    },
+    {
+     "annee": 2024,
+     "pe": 23.5,
+     "ps": 2.1,
+     "pfcf": 15.3,
+     "pb": 6.7,
+     "evebitda": 11.9
+    },
+    {
+     "annee": 2025,
+     "pe": null,
+     "ps": 1.9,
+     "pfcf": 14.0,
+     "pb": 7.0,
+     "evebitda": 10.8
+    }
+   ],
+   "slow_maj": "2026-11-04"
   }
  ]
 }
