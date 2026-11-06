@@ -20,7 +20,7 @@ nav button.on{color:var(--ink);border-color:var(--acc);font-weight:600}
 .kpis{display:flex;gap:28px;flex-wrap:wrap;margin-bottom:20px}
 .kpis div span{display:block;color:var(--mute);font-size:13px}
 .kpis div b{font:500 22px "IBM Plex Mono",monospace}
-form,.row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;align-items:end}
+,.row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;align-items:end}
 label{display:flex;flex-direction:column;font-size:13px;color:var(--mute);gap:2px}
 input,select{padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink);font:inherit}
 button.add,button.back{background:var(--acc);color:#fff;border:0;border-radius:6px;padding:8px 16px;font:inherit;cursor:pointer}
@@ -43,9 +43,12 @@ td.n{font-family:"IBM Plex Mono",monospace;font-size:14px}
 .ev{display:flex;gap:14px;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line)}
 .ev:last-child{border:0}
 .ev .d{width:52px;text-align:center;background:var(--bg);border-radius:8px;padding:4px 0;color:var(--gold)}
-.ev .d small{display:block;font-size:11px;text-transform:uppercase;font-weight:600}
+.ev .d small{display:block;font-size:11px;text-trans:uppercase;font-weight:600}
 .ev .d b{font:600 18px "IBM Plex Sans"}
 .big{font:500 24px "IBM Plex Mono",monospace;color:var(--gold)}
+.seg{display:inline-flex;gap:2px;background:var(--bg);border-radius:20px;padding:3px}
+.seg button{background:none;border:0;border-radius:16px;padding:3px 10px;font:inherit;font-size:12px;color:var(--mute);cursor:pointer}
+.seg button.on{background:var(--gold);color:#16202e;font-weight:600}
 </style>
 </head>
 <body>
@@ -55,8 +58,18 @@ td.n{font-family:"IBM Plex Mono",monospace;font-size:14px}
 
 <section id="pf">
   <div class="kpis"><div><span>Valeur</span><b id="tv">–</b></div><div><span>Gain / perte</span><b id="tg">–</b></div><div><span>Dividendes / an (estimé)</span><b id="td">–</b></div></div>
-  <form id="f"><select id="t" required></select><input id="q" type="number" step="any" min="0" placeholder="Quantité" required><input id="p" type="number" step="any" min="0" placeholder="Prix d'achat moyen" required><button class="add">Ajouter</button></form>
-  <div class="wrap"><table id="tpf"></table></div>
+ <div class="card" style="margin-bottom:16px">
+  <div class="row" style="justify-content:space-between;align-items:center;margin-bottom:8px">
+    <h3 style="margin:0">Évolution globale</h3>
+    <div class="row" style="margin:0;align-items:center">
+      <span class="seg" id="mode"><button data-m="v">Valeur</button><button data-m="p">%</button></span>
+      <span class="seg" id="per"><button data-p="1M">1M</button><button data-p="YTD">YTD</button><button data-p="1Y">1Y</button><button data-p="2Y">2Y</button><button data-p="3Y">3Y</button><button data-p="5Y">5Y</button><button data-p="ALL">ALL</button></span>
+    </div>
+  </div>
+  <div id="evc"></div>
+  <div class="maj" id="evn"></div>
+</div>
+<form id="f"><select id="t" required></select><input id="q" type="number" step="any" min="0" placeholder="Quantité" required><input id="p" type="number" step="any" min="0" placeholder="Prix d'achat moyen" required><label>Date d'achat<input id="dt" type="date"></label><button class="add">Ajouter</button></form>
 </section>
 
 <section id="cac" hidden><div class="wrap"><table id="tcac"></table></div>
@@ -161,15 +174,57 @@ function calc(){
   $("#co").innerHTML=`<div class="kpis"><div><span>Rdt sur coût actuel</span><b class="big">${nf(d0/pru*100,2)} %</b></div><div><span>Rdt sur coût dans ${y} ans</span><b class="big">${nf(dn/pru*100,2)} %</b></div><div><span>Dividende annuel dans ${y} ans</span><b class="big">${nf(n*dn,0)} €</b></div></div>${bars(data.length>12?data.filter((_,i)=>i%Math.ceil(data.length/12)===0):data,v=>nf(v,0))}`;
 }
 
+  /* ---------- évolution globale ---------- */
+let H=null,per="1Y",mode="v";
+const iso=d=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+function renderEvo(){
+  document.querySelectorAll("#per button").forEach(b=>b.classList.toggle("on",b.dataset.p===per));
+  document.querySelectorAll("#mode button").forEach(b=>b.classList.toggle("on",b.dataset.m===mode));
+  const box=$("#evc"),note=$("#evn");note.textContent="";
+  const lines=pf.filter(l=>D.some(a=>a.ticker===l.t));
+  if(!lines.length){box.innerHTML='<div class="empty">Ajoutez une ligne pour voir l\'évolution.</div>';return}
+  if(!H){box.innerHTML='<div class="empty">historique.json introuvable : lancez « Historique des cours » (onglet Actions).</div>';return}
+  const n=new Date(),today=iso(n),dates=[...H.dates],live=dates[dates.length-1]<today;
+  if(live)dates.push(today);
+  const P=(t,i)=>{if(live&&i===dates.length-1){const a=D.find(x=>x.ticker===t);return a?a.cours:null}return H.px[t]?H.px[t][i]:null};
+  let st=per==="ALL"?"0000":per==="1M"?iso(new Date(n.getFullYear(),n.getMonth()-1,n.getDate())):per==="YTD"?n.getFullYear()+"-01-01":iso(new Date(n.getFullYear()-parseInt(per),n.getMonth(),n.getDate()));
+  if(lines.every(l=>l.d)){const f0=lines.map(l=>l.d).sort()[0];if(f0>st)st=f0}
+  const pts=[];
+  dates.forEach((d,i)=>{if(d<st)return;let v=0,c=0;
+    lines.forEach(l=>{if(l.d&&l.d>d)return;const p=P(l.t,i);if(p==null)return;v+=p*l.q;c+=l.p*l.q});
+    if(c>0)pts.push({d,v,c})});
+  if(pts.length<2){box.innerHTML='<div class="empty">Données insuffisantes pour cette période.</div>';return}
+  const pc=mode==="p",ys=pts.map(p=>pc?(p.v/p.c-1)*100:p.v),all=pc?ys.concat(0):ys.concat(pts.map(p=>p.c));
+  let mn=Math.min(...all),mx=Math.max(...all);const mg=(mx-mn)*.08||1;mn-=mg;mx+=mg;
+  const w=640,h=260,pr=64,pt=16,pb=28,X=i=>i*(w-pr)/(pts.length-1),Y=v=>pt+(h-pt-pb)*(1-(v-mn)/(mx-mn));
+  const f=v=>pc?nf(v,1)+" %":Math.abs(v)>=1000?nf(v/1000,1)+" k":nf(v,0);
+  const last=pts.at(-1),ly=ys.at(-1),col=ly>=(pc?0:last.c)?"var(--up)":"var(--down)";
+  let s=`<svg viewBox="0 0 ${w} ${h}" class="ch">`;
+  for(let k=0;k<5;k++){const v=mn+(mx-mn)*k/4;s+=`<line x1="0" x2="${w-pr}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--line)"/><text x="${w-pr+8}" y="${Y(v)+3}" class="t m">${f(v)}</text>`}
+  s+=`<path d="M0,${h-pb} `+ys.map((v,i)=>`L${X(i)},${Y(v)}`).join(" ")+` L${X(ys.length-1)},${h-pb} Z" fill="${col}" opacity=".12"/>`;
+  if(pc)s+=`<line x1="0" x2="${w-pr}" y1="${Y(0)}" y2="${Y(0)}" stroke="var(--mute)" stroke-dasharray="4 4"/>`;
+  else s+=`<polyline fill="none" stroke="var(--mute)" stroke-width="1.5" stroke-dasharray="4 4" points="${pts.map((p,i)=>X(i)+","+Y(p.c)).join(" ")}"/>`;
+  s+=`<polyline fill="none" stroke="${col}" stroke-width="2" points="${ys.map((v,i)=>X(i)+","+Y(v)).join(" ")}"/>`;
+  const short=pts.length<70;
+  for(let k=0;k<6;k++){const i=Math.round(k*(pts.length-1)/5),dt=new Date(pts[i].d+"T12:00");
+    s+=`<text x="${Math.min(Math.max(X(i),16),w-pr-16)}" y="${h-8}" text-anchor="middle" class="t m">${dt.toLocaleDateString("fr-FR",short?{day:"numeric",month:"short"}:{month:"short",year:"2-digit"})}</text>`}
+  s+=`<rect x="${w-pr+2}" y="${Y(ly)-9}" width="58" height="18" rx="4" fill="${col}"/><text x="${w-pr+31}" y="${Y(ly)+3}" text-anchor="middle" style="font:10px 'IBM Plex Mono',monospace;fill:#fff">${f(ly)}</text></svg>`;
+  box.innerHTML=s;
+  const days=(new Date(last.d)-new Date(pts[0].d))/864e5,cg=days>=60?(Math.pow(last.v/last.c,365/days)-1)*100:null;
+  note.textContent=`Valeur ${nf(last.v,0)} € · Investi ${nf(last.c,0)} € (trait pointillé) · CAGR ${cg==null?"–":nf(cg,1)+" %"} (approximatif)`;
+}
+fetch("historique.json?"+Date.now()).then(r=>r.json()).then(j=>{H=j;renderEvo()}).catch(()=>{});
+$("#per").onclick=e=>{const p=e.target.dataset.p;if(p){per=p;renderEvo()}};
+$("#mode").onclick=e=>{const m=e.target.dataset.m;if(m){mode=m;renderEvo()}};
 /* ---------- init ---------- */
-const render=()=>{renderPF();renderCAC();renderCal()};
+const render=()=>{renderPF();renderCAC();renderCal();renderEvo()};
 fetch("data.json?"+Date.now()).then(r=>r.json()).then(j=>{
   D=j.actions;$("#maj").textContent="Mis à jour le "+new Date(j.maj).toLocaleString("fr-FR");
   const g={};D.filter(a=>a.cac40).forEach(a=>(g[a.secteur]??=[]).push(a.per));for(const s in g)secPer[s]=med(g[s]);
   $("#t").innerHTML=D.slice().sort((a,b)=>a.nom.localeCompare(b.nom)).map(a=>`<option value="${a.ticker}">${a.nom} (${a.ticker})</option>`).join("");
   render();
 }).catch(()=>{$("#maj").textContent="data.json introuvable : lancez la mise à jour (onglet Actions)";render()});
-$("#f").onsubmit=e=>{e.preventDefault();pf.push({t:$("#t").value,q:+$("#q").value,p:+$("#p").value});save();$("#q").value=$("#p").value="";render()};
+$("#f").onsubmit=e=>{e.preventDefault();pf.push({t:$("#t").value,q:+$("#q").value,p:+$("#p").value,d:$("#dt").value});save();$("#q").value=$("#p").value=$("#dt").value="";render()};
 $("#tpf").onclick=e=>{const i=e.target.dataset.i;if(i!=null){pf.splice(+i,1);save();render()}};
 $("#tcac").onclick=e=>{const k=e.target.dataset.k;if(!k)return;sort=sort.k===k?{k,d:-sort.d}:{k,d:1};renderCAC()};
 $("#onlypf").onchange=renderCal;
