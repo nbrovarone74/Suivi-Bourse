@@ -1,0 +1,23 @@
+name: Historique des cours
+on:
+  schedule:
+    - cron: "30 18 * * 1-5"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  hist:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with: { python-version: "3.12" }
+      - run: pip install yfinance
+      - run: python update_hist.py
+      - run: |
+          git config user.name "bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add historique.json
+          git commit -m "maj historique" || exit 0
+          git pull --rebase
+          git push
