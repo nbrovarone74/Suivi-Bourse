@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-09T03:49:09.533816Z",
+ "maj": "2026-11-09T04:56:20.689577Z",
  "actions": [
   {
    "ticker": "AI.PA",
@@ -460,8 +460,8 @@
    "per": 16.124523,
    "ca": 23439998976,
    "resultat": 1375000064,
-   "div_rate": 3.4,
-   "payout": 0.432,
+   "div_rate": null,
+   "payout": null,
    "cac40": true,
    "divs": {
     "2016": 1.35,
@@ -655,8 +655,8 @@
    "per": 22.225166,
    "ca": 27481999360,
    "resultat": 1944999936,
-   "div_rate": 2.25,
-   "payout": 0.745,
+   "div_rate": null,
+   "payout": null,
    "cac40": true,
    "divs": {
     "2016": 1.6,
@@ -720,8 +720,8 @@
    "per": 26.212122,
    "ca": 6298100224,
    "resultat": 1339600000,
-   "div_rate": 0.27,
-   "payout": 0.2727,
+   "div_rate": null,
+   "payout": null,
    "cac40": true,
    "divs": {
     "2016": 0.094,
@@ -916,8 +916,8 @@
    "per": 36.2243,
    "ca": 29284999168,
    "resultat": 2494000128,
-   "div_rate": 4.0,
-   "payout": 0.7477,
+   "div_rate": null,
+   "payout": null,
    "cac40": true,
    "divs": {
     "2016": 1.11,
@@ -981,8 +981,8 @@
    "per": 30.777777,
    "ca": 7385500160,
    "resultat": 469900000,
-   "div_rate": 0.72,
-   "payout": 0.25,
+   "div_rate": null,
+   "payout": null,
    "cac40": true,
    "divs": {
     "2016": 0.145,
@@ -1175,8 +1175,8 @@
    "per": 38.18336,
    "ca": 45354799104,
    "resultat": 6306299904,
-   "div_rate": 7.2,
-   "payout": 0.6112,
+   "div_rate": null,
+   "payout": null,
    "cac40": true,
    "divs": {
     "2016": 3.1,
@@ -1500,8 +1500,8 @@
    "per": 14.914046,
    "ca": 9404000256,
    "resultat": 1203000064,
-   "div_rate": 4.7,
-   "payout": 0.9853,
+   "div_rate": null,
+   "payout": null,
    "cac40": true,
    "divs": {
     "2016": 1.88,
@@ -1756,8 +1756,8 @@
    "per": 13.747681,
    "ca": 46226001920,
    "resultat": 2671000064,
-   "div_rate": 2.3,
-   "payout": 0.4267,
+   "div_rate": null,
+   "payout": null,
    "cac40": true,
    "divs": {
     "2016": 1.24,
@@ -1820,8 +1820,8 @@
    "per": 24.20231,
    "ca": 50981998592,
    "resultat": 4139000064,
-   "div_rate": 4.12,
-   "payout": 1.1908001,
+   "div_rate": null,
+   "payout": null,
    "cac40": true,
    "divs": {
     "2016": 2.93,
@@ -2356,8 +2356,8 @@
    "per": 19.639534,
    "ca": 44541001728,
    "resultat": 1254000000,
-   "div_rate": 1.5,
-   "payout": 0.8721,
+   "div_rate": null,
+   "payout": null,
    "cac40": true,
    "divs": {
     "2016": 0.7038,
